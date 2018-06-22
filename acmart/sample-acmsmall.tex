@@ -1,0 +1,133 @@
+\documentclass[format=acmsmall, review=false, screen=true]{acmart}
+
+\usepackage{booktabs} % For formal tables
+
+\usepackage[ruled]{algorithm2e} % For algorithms
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+
+% Metadata Information
+\acmJournal{TWEB}
+\acmVolume{9}
+\acmNumber{4}
+\acmArticle{39}
+\acmYear{2010}
+\acmMonth{3}
+\copyrightyear{2009}
+%\acmArticleSeq{9}
+
+% Copyright
+%\setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+% DOI
+\acmDOI{0000001.0000001}
+
+% Paper history
+\received{February 2007}
+\received[revised]{March 2009}
+\received[accepted]{June 2009}
+
+\graphicspath{{figure/}}
+
+% Document starts
+\begin{document}
+% Title portion. Note the short title for running heads
+
+
+\title{Peapods:A tool that provides security enhancements for cryptographic software systems}
+\author{Li Congwu}
+\affiliation{%
+  \institution{State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences}
+  \country{CHINA}}
+\author{LIN Jingqiang}
+\affiliation{%
+  \institution{State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences}
+  \country{CHINA}
+}
+\author{CAI Quanwei}
+\affiliation{%
+  \institution{State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences}
+  \country{CHINA}
+}
+\author{LUO Bo}
+\affiliation{%
+  \institution{Department of Electrical Engineering and Computer Science, the University of Kansas}
+  \country{USA}
+}
+
+\begin{abstract}
+Cryptographic algorithms are widely used in cryptographic systems and play a significant role.The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic software systems is not guaranteed, it will cause extreme problems for users. Big losses; on the other hand, the speed of password computing directly affects the user's experience with the crypto software system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services.However, existing programs face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.In this paper, We present Peapods, a compiler enhancement tool that provides security enhancements for cryptographic software systems that can defend against memory disclosure attacks.A Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information.Our experiments show that there is no problem with security and compared to PolarSSL RSA private-key calculation protected by Peapods and non-protected PolarSSL, the performance loss is only 10\% within an acceptable range.
+%The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic software systems is not guaranteed, it will cause extreme problems for users. Big losses; on the other hand, the speed of password computing directly affects the user's experience with the crypto software system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services. Based on this, this paper proposes Peapods, a tool that provides security enhancements for cryptographic software systems that can defend against software memory attacks and cold-start attacks. Peapods can automatically encrypt and decrypt sensitive variables when users add a small amount of code. Therefore, we can provide security enhancements for various types of cryptographic software systems without the need to reconstruct the entire cryptographic software system and add a small amount of source code in the presence of security vulnerabilities. On the platform supporting Intel TSX features, we implemented the Peapods prototype based on the transactional memory mechanism, and through simulated attacks, we proved that Peapods can effectively prevent malicious code from accessing sensitive information. Moreover, compared to Polar SSL protected by Peapods and non-protected Polar SSL, the performance loss is only 10\% within an acceptable range.
+\end{abstract}
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below.
+%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computer systems organization~Embedded systems}
+\ccsdesc[300]{Computer systems organization~Redundancy}
+\ccsdesc{Computer systems organization~Robotics}
+\ccsdesc[100]{Networks~Network reliability}
+
+%
+% End generated code
+%
+
+% We no longer use \terms command
+%\terms{Design, Algorithms, Performance}
+
+\keywords{Implementation of Cryptographic Algorithm, Software Memory Attack, Cold Boot Attack,
+Transactional Memory, Sensitive information protection
+}
+
+
+\thanks{This work is supported by XXX}
+
+
+\maketitle
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Li et al.}
+
+\input{samplebody-journals}
+
+
+\end{document}
