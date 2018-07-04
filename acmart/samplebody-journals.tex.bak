@@ -14,7 +14,8 @@ There are many security threats when the cryptographic algorithm is running. One
 
 Peapods
 %介绍peapods的贡献
-Peapods is a compiler enhancement that provides security enhancements for cryptographic software systems that can defend against software memory attacks and cold-boot attack when programmers using the Open Source cryptographic library.
+Memory disclosure attacks pose a serious threat to sensitive plaintext data in memory.Therefore, the sensitive data needs to find a secure temporary storage area so that it can be stored in clear text and can also be accessed by instructions in the cryptographic algorithm implementation.
+Peapods is a compiler enhancement tool that provides security enhancements for cryptographic software systems that can defend against software memory attacks and cold-boot attack when programmers using the Open Source cryptographic library.
 
 In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information.
 
@@ -68,7 +69,7 @@ In this paper we assume a powerful attacker who has the ability
 to read arbitrary areas of memory and overwrite all writable
 areas of memory. However, the attacker is unable to write to executable
 memory (marked read-only) or read the value of special
-registers our compiler reserves. 
+registers our compiler reserves.
 
 Peapods is focused on protecting user-level programs such as PolarSSL RSA decryption calculation, and we do not address protecting the kernel in this paper.
 We assume that the kernel does not save any user-level registers—
@@ -237,6 +238,7 @@ In addition, the user needs to call the START(args\_list) function before calcul
 After users complete the above work, Peapods will automatically use HTM to protect sensitive information. Therefore, we can provide security enhancements for various types of cryptographic software systems without refactoring the entire cryptographic software in the presence of security vulnerabilities.The amount of code that the user needs to add is only a few hundred lines to several thousand lines (depending on the number and type of sensitive variables, the number of splits, etc.), the proportion compared to the total code volume of the cryptographic software system (usually several hundred thousand lines) is small.
 
 It is worth noting that all user programs in the system need to be compiled with our modified LLVM compiler to ensure the security of the master key.
+%用户使用代码示例
 \section{SECURITY DISCUSSION}
 
 %侧信道 dump内存
