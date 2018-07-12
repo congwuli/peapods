@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  22 JUN 2018 09:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  12 JUL 2018 17:02
 entering extended mode
-**C:/Users/lcw/Desktop/acmart(1)/acmart/sample-acmsmall.tex
-(C:/Users/lcw/Desktop/acmart(1)/acmart/sample-acmsmall.tex
+**C:/Users/lcw/peapods/acmart/sample-acmsmall.tex
+(C:/Users/lcw/peapods/acmart/sample-acmsmall.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\Users\lcw\Desktop\acmart(1)\acmart\acmart.cls
+(C:\Users\lcw\peapods\acmart\acmart.cls
 Document Class: acmart 2017/01/07 v1.28 Typesetting articles for Association of
  Computing Machinery
 (D:\software\tex\CTEX\MiKTeX\tex\latex\xkeyval\xkeyval.sty
@@ -509,9 +509,74 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count125
 \@thisrulewidth=\dimen152
 )
+(D:\software\tex\CTEX\CTeX\tex\latex\ccmap\ccmap.sty
+Package: ccmap 2006/11/18
+\CCT@hooka@@=\toks32
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\listings\listings.sty
+\lst@mode=\count126
+\lst@gtempboxa=\box34
+\lst@token=\toks33
+\lst@length=\count127
+\lst@currlwidth=\dimen153
+\lst@column=\count128
+\lst@pos=\count129
+\lst@lostspace=\dimen154
+\lst@width=\dimen155
+\lst@newlines=\count130
+\lst@lineno=\count131
+\lst@maxwidth=\dimen156
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count132
+\lst@skipnumbers=\count133
+\lst@framebox=\box35
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\listings\listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\tools\array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen157
+\extrarowheight=\dimen158
+\NC@list=\toks34
+\extratabsurround=\skip68
+\backup@length=\skip69
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen159
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\graphics\epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen160
+\epsfysize=\dimen161
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip70
+\subfigcapskip=\skip71
+\subfigcaptopadj=\dimen162
+\subfigbottomskip=\skip72
+\subfigcapmargin=\dimen163
+\subfiglabelskip=\skip73
+\c@subfigure=\count134
+\c@lofdepth=\count135
+\c@subtable=\count136
+\c@lotdepth=\count137
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(D:\software\tex\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip74
+\subfig@bottom=\skip75
+)
 (D:\software\tex\CTEX\MiKTeX\tex\latex\algorithm2e\algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count126
+\c@AlgoLine=\count138
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -536,73 +601,75 @@ Package `algorithm2e' Release 4.01 -- december 14 2009 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (fiorio@lirmm.fr)
 ********************************************************
-\skiptotal=\skip68
-\skiplinenumber=\skip69
-\skiprule=\skip70
-\skiphlne=\skip71
-\skiptext=\skip72
-\skiplength=\skip73
-\algomargin=\skip74
-\skipalgocfslide=\skip75
-\algowidth=\dimen153
-\inoutsize=\dimen154
-\inoutline=\dimen155
-\interspacetitleruled=\dimen156
-\interspacealgoruled=\dimen157
-\interspacetitleboxruled=\dimen158
-\algocf@inoutbox=\box34
-\algocf@inputbox=\box35
-\AlCapSkip=\skip76
-\AlCapHSkip=\skip77
-\algocf@nlbox=\box36
-\algocf@hangingbox=\box37
-\algocf@capbox=\box38
-\algoheightruledefault=\skip78
-\algoheightrule=\skip79
-\algotitleheightruledefault=\skip80
-\algotitleheightrule=\skip81
-\c@algocfline=\count127
-\c@algocfproc=\count128
-\c@algocf=\count129
-\algocf@algoframe=\box39
-\algocf@algobox=\box40
+\skiptotal=\skip76
+\skiplinenumber=\skip77
+\skiprule=\skip78
+\skiphlne=\skip79
+\skiptext=\skip80
+\skiplength=\skip81
+\algomargin=\skip82
+\skipalgocfslide=\skip83
+\algowidth=\dimen164
+\inoutsize=\dimen165
+\inoutline=\dimen166
+\interspacetitleruled=\dimen167
+\interspacealgoruled=\dimen168
+\interspacetitleboxruled=\dimen169
+\algocf@inoutbox=\box36
+\algocf@inputbox=\box37
+\AlCapSkip=\skip84
+\AlCapHSkip=\skip85
+\algocf@nlbox=\box38
+\algocf@hangingbox=\box39
+\algocf@capbox=\box40
+\algoheightruledefault=\skip86
+\algoheightrule=\skip87
+\algotitleheightruledefault=\skip88
+\algotitleheightrule=\skip89
+\c@algocfline=\count139
+\c@algocfproc=\count140
+\c@algocf=\count141
+\algocf@algoframe=\box41
+\algocf@algobox=\box42
 )
-Class acmart Info: Using journal code tweb on input line 15.
- (C:\Users\lcw\Desktop\acmart(1)\acmart\sample-acmsmall.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
+Class acmart Info: Using journal code tweb on input line 25.
+ (C:\Users\lcw\peapods\acmart\sample-acmsmall.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
-
-(D:\software\tex\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+LaTeX Font Info:    ... okay on input line 54.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+ (D:\software\tex\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 
+LaTeX Warning: File u.cmap not found on input line 54.
+
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
 (D:\software\tex\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 44.
+LaTeX Info: Redefining \microtypecontext on input line 54.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -618,8 +685,8 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 (RS)
 )
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 44.
+\AtBeginShipoutBox=\box43
+Package hyperref Info: Link coloring ON on input line 54.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -627,29 +694,29 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (D:\software\tex\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 54.
+LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \nameref on input line 54.
 
-(C:\Users\lcw\Desktop\acmart(1)\acmart\sample-acmsmall.out)
-(C:\Users\lcw\Desktop\acmart(1)\acmart\sample-acmsmall.out)
+(C:\Users\lcw\peapods\acmart\sample-acmsmall.out)
+(C:\Users\lcw\peapods\acmart\sample-acmsmall.out)
 \@outlinefile=\write4
 
 (D:\software\tex\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen159
-\scratchbox=\box42
-\nofMPsegments=\count132
-\nofMParguments=\count133
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen160
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count143
+\scratchdimen=\dimen170
+\scratchbox=\box44
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen171
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks36
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -687,7 +754,13 @@ LaTeX Info: Redefining \nameref on input line 44.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count149
+
+LaTeX Warning: File ts1.cmap not found on input line 135.
+
 (D:\software\tex\CTEX\MiKTeX\tex\latex\microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -695,59 +768,84 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1.1{D:/software/tex/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK
 .sfd}}]
-(C:\Users\lcw\Desktop\acmart(1)\acmart\samplebody-journals.tex [2.2]
-Underfull \vbox (badness 2564) has occurred while \output is active []
+(C:\Users\lcw\peapods\acmart\samplebody-journals.tex [2.2]
+Underfull \vbox (badness 2310) has occurred while \output is active []
 
  [3.3]
 Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¯ in font cmr10!
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [4.4]
+Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
-Missing character: There is no ½ in font cmssbx10!
-Missing character: There is no á in font cmssbx10!
-Missing character: There is no ¹ in font cmssbx10!
-Missing character: There is no ¹ in font cmssbx10!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4.4]
-<figure/design.pdf, id=135, 550.3188pt x 498.42108pt>
-File: figure/design.pdf Graphic file (type pdf)
- <use figure/design.pdf>
-Package pdftex.def Info: figure/design.pdf used on input line 141.
-(pdftex.def)             Requested size: 356.23782pt x 322.63893pt.
-Missing character: There is no × in font cmss9!
-Missing character: There is no Ü in font cmss9!
-Missing character: There is no Ì in font cmss9!
-Missing character: There is no å in font cmss9!
-Missing character: There is no ¼ in font cmss9!
-Missing character: There is no Ü in font cmss9!
-Missing character: There is no ¹ in font cmss9!
-Missing character: There is no ¹ in font cmss9!
-Missing character: There is no × in font cmss9!
-Missing character: There is no Ü in font cmss9!
-Missing character: There is no Ì in font cmss9!
-Missing character: There is no å in font cmss9!
-Missing character: There is no ¼ in font cmss9!
-Missing character: There is no Ü in font cmss9!
-Missing character: There is no ¹ in font cmss9!
-Missing character: There is no ¹ in font cmss9!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5.5]
-[6.6 <C:/Users/lcw/Desktop/acmart(1)/acmart/figure/design.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6.6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
-[8.8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
+
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
+
+Underfull \vbox (badness 4096) has occurred while \output is active []
+
+ [8.8]
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+
+Overfull \hbox (32.51093pt too wide) in paragraph at lines 252--263
+ [][] 
+ []
+
+[9.9]
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+ [10.10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9.9]
+ [11.11]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
+
+[12.12]
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
-
-[10.10]
 Missing character: There is no Ó in font cmssbx10!
 Missing character: There is no ë in font cmssbx10!
 Missing character: There is no µ in font cmssbx10!
@@ -756,41 +854,43 @@ Missing character: There is no ± in font cmssbx10!
 Missing character: There is no È in font cmssbx10!
 Missing character: There is no ½ in font cmssbx10!
 Missing character: There is no Ï in font cmssbx10!
- (C:\Users\lcw\Desktop\acmart(1)\acmart\comment.cut)
-(C:\Users\lcw\Desktop\acmart(1)\acmart\sample-acmsmall.bbl
+ (C:\Users\lcw\peapods\acmart\comment.cut)
+(C:\Users\lcw\peapods\acmart\sample-acmsmall.bbl)) [13.13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 41.
-
-)) [11.11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
- (C:\Users\lcw\Desktop\acmart(1)\acmart\sample-acmsmall.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+(C:\Users\lcw\peapods\acmart\sample-acmsmall.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `sample-acmsmall.out' has not changed.
-(rerunfilecheck)             Checksum: 5E1BD50FCC797F9724713135633586AB;3910.
+(rerunfilecheck)             Checksum: BA5312F6B472CE8EB44C1C5B9CA096EF;3873.
  ) 
 Here is how much of TeX's memory you used:
- 13485 strings out of 495354
- 192446 string characters out of 3183131
- 350917 words of memory out of 3000000
- 16154 multiletter control sequences out of 15000+200000
- 17464 words of font info for 121 fonts, out of 3000000 for 9000
+ 14999 strings out of 495354
+ 214468 string characters out of 3183131
+ 393125 words of memory out of 3000000
+ 17561 multiletter control sequences out of 15000+200000
+ 18107 words of font info for 123 fonts, out of 3000000 for 9000
  175 hyphenation exceptions out of 8191
- 60i,18n,94p,1974b,653s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,18n,94p,1964b,1123s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/software/tex/CTEX/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/so
-ftware/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/software/te
-x/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/software/tex/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/software/tex/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr9.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmss10.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmss9.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mssbx10.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.p
-fb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm-super/sfrm0800.pfb><D:/so
-ftware/tex/CTEX/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb>
-Output written on sample-acmsmall.pdf (11 pages, 311216 bytes).
+ftware/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/software/t
+ex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/software/tex/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/software/tex/CTEX/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr9.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+ss10.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb>
+<D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/so
+ftware/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/software/t
+ex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/software/tex/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fon
+ts/type1/public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
+public/cm-super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
+-super/sfrm1000.pfb>
+Output written on sample-acmsmall.pdf (13 pages, 268111 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 21718 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 22745 words of extra memory for PDF output out of 24883 (max. 10000000)
 

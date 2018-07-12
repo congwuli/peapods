@@ -1,5 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: sample-acmsmall.aux
-The style file: ACM-Reference-Format.bst
 I found no \citation commands---while reading file sample-acmsmall.aux
-Database file #1: sample-bibliography.bib
-(There was 1 error message)
+I found no \bibdata command---while reading file sample-acmsmall.aux
+I found no \bibstyle command---while reading file sample-acmsmall.aux
+(There were 3 error messages)

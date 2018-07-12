@@ -2,6 +2,18 @@
 
 \usepackage{booktabs} % For formal tables
 
+\usepackage{hyperref}
+\usepackage{ccmap}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+
 \usepackage[ruled]{algorithm2e} % For algorithms
 \renewcommand{\algorithmcfname}{ALGORITHM}
 \SetAlFnt{\small}
@@ -67,7 +79,7 @@
 }
 
 \begin{abstract}
-Cryptographic algorithms are widely used in cryptographic systems and play a significant role.The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic software systems is not guaranteed, it will cause extreme problems for users. Big losses; on the other hand, the speed of password computing directly affects the user's experience with the crypto software system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services.However, existing programs face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.In this paper, We present Peapods, a compiler enhancement tool that provides security enhancements for cryptographic software systems that can defend against memory disclosure attacks.
+Cryptographic algorithms are widely used in cryptographic systems and play a significant role.The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic software systems is not guaranteed, it will cause extreme problems for users. Big losses; on the other hand, the speed of password computing directly affects the user's experience with the crypto software system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services.However, existing programs face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.In this paper, We present Peapods, a compiler enhancement tool that provides security enhancements for cryptographic software systems that can defend against memory disclosure attacks.A Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information.Our experiments show that there is no problem with security and compared to PolarSSL RSA private-key calculation protected by Peapods and non-protected PolarSSL, the performance loss is only 10\% within an acceptable range.
 %The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic software systems is not guaranteed, it will cause extreme problems for users. Big losses; on the other hand, the speed of password computing directly affects the user's experience with the crypto software system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services. Based on this, this paper proposes Peapods, a tool that provides security enhancements for cryptographic software systems that can defend against software memory attacks and cold-start attacks. Peapods can automatically encrypt and decrypt sensitive variables when users add a small amount of code. Therefore, we can provide security enhancements for various types of cryptographic software systems without the need to reconstruct the entire cryptographic software system and add a small amount of source code in the presence of security vulnerabilities. On the platform supporting Intel TSX features, we implemented the Peapods prototype based on the transactional memory mechanism, and through simulated attacks, we proved that Peapods can effectively prevent malicious code from accessing sensitive information. Moreover, compared to Polar SSL protected by Peapods and non-protected Polar SSL, the performance loss is only 10\% within an acceptable range.
 \end{abstract}
 

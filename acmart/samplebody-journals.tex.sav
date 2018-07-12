@@ -7,13 +7,21 @@ However, existing programs face various memory disclosure attacks and the securi
 
 %介绍peapods的必要性
 
-Memory Disclosure Attacks
+\textbf{Memory Disclosure Attacks}
+
 %简要介绍内存泄漏攻击带来的威胁
 There are many security threats when the cryptographic algorithm is running. One of them is sensitive information stored in the memory, such as a key, which is stolen by an adversary.One of the attacks is a memory disclosure attack. Memory disclosure attacks are read-only memory attacks where the adversary can obtain the contents of the memory but cannot tamper with it. Memory disclosure attacks include software attacks and hardware attacks.Software attack means that the attacker does not physically touch the attack target. It uses software vulnerabilities to bypass the system protection mechanism and illegally accesses the data in the memory.Such as OpenSSL heart bleeding attack, using OpenSSL heartbeat vulnerability, so that remote attackers can obtain a server 64KB memory data by constructing a malicious request.Hardware attack means that an attacker can physically contact an attack target and use a physical method to read the memory of the target.Such as cold-boot attack, using the delay disappearance effect of DRAM, directly read the contents of the memory chip.In short, memory disclosure attacks pose a serious threat to plain-text sensitive data in memory.
 
+Therefore, the sensitive data needs to find a secure temporary storage area so that it can be stored in clear text and can also be accessed by instructions in the cryptographic algorithm implementation.This secure temporary storage area should enable the sensitive information that needs to be protected when the cryptographic algorithm is run to be stored in clear text. The information out of this area needs to be encrypted and saved.There are two types of sensitive information that need to be protected: (1) Persistent sensitive information, such as a master key, is used to encrypt information leaving a secure area and decrypt information entering a secure area, (2) Non-persistent sensitive information, such as temporary data generated during the calculation that can be used to derive the key.For the master key, it is always stored in secure storage in clear text whether or not the sensitive information calculation is to be performed.The non-persistent sensitive information is generated when the master key is used to decrypt or calculate after the calculation starts. The plaintext is stored in the secure area. When the sensitive information calculation is completed, it is cleared from the secure area.
 
-Peapods
+For physical memory attacks in memory disclosure attacks, any storage area that can restrict access only at the software level is insecure. Secure storage should have physical mechanisms to restrict access.Each CPU core or each hardware thread has a separate set of registers that can only be read by the currently executing instruction.Therefore, the register is the storage resource that runs the program exclusive and it is an ideal secure storage.
+
+In addition, the transactional memory mechanism provides a suitable secure temporary storage area. Transactional memory mechanisms implemented with hardware, such as TSX, can effectively defend against physical memory attacks.
+%事务内存机制提供了合适的安全存储区域，使用硬件方法实现的事务内存机制，如TSX，可以有效地防御physical memory attacks
+
+\textbf{Peapods}
 %介绍peapods的贡献
+
 Peapods is a compiler enhancement tool that provides security enhancements for cryptographic software systems that can defend against software memory attacks and cold-boot attack when programmers using the Open Source cryptographic library.
 
 In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information.
@@ -29,13 +37,22 @@ We implemented Peapods in LLVM for x86 and recompiled PolarSSL and all of its de
 \subsection{Memory Disclosure Attacks}
 1.physical memory attack
 
+Physical memory attack refers to the behavior of the attacker directly reading the memory chip and obtaining the data illegally after the attacker has physical control over the attack target.In this case, any software-based protection will fail because the attacker can directly manipulate the hardware.Physical memory attack mainly include two types: (1)cold boot attack, which uses DRAM's delay-disappearing effect to directly read the contents of the memory chip, (2)DMA attack, which initiate illegal DMA requests through malicious peripherals, and directly read data from the memory chip.
+
 2.software memory attack
+
+Software memory attack refers to the behavior of the attacker does not physically contact the attack target, and uses software vulnerabilities to bypass the system protection mechanism and illegally access the data in the memory.For example, OpenSSL heart bleeding attack exploits the vulnerability of OpenSSL heartbeat to enable remote attackers to obtain 64KB of memory data from the server once by constructing a malicious request.Software memory attack mainly include four types: (1)attack based on an isolation mechanism vulnerability, which exploits the defect of the virtual memory subsystem of the operating system to illegally access data from the memory chip, (2)attack based on unclear dynamic memory, which originates from the fact that the dynamic memory storing sensitive information is not cleared and is used by other programs, (3)attack based on cryptographic software's own vulnerability, such as OpenSSL heart bleeding attack, (4)attack based on memory data diffusion, which exploits normal operating system functionality.For example, kernel dumps were originally used to save memory images to disk for developers to debug after a software crash, but attackers can also use this feature to deliberately trigger an exception that causes the software to crash, and then read the sensitive data contained in the process from the disk.
+
+These types of attacks pose a great threat to users' sensitive data.We need a complete solution to defend against these attacks and protect users' data security.
 %枚举内存泄漏攻击种类
 
 \subsection{TSX}
-TSX and RTM
+%TSX and RTM
 %介绍事务内存和RTM接口
+Transactional memory is a software technique that simplifies writing concurrent programs.The main idea is to declare a region of code as a transaction. A transaction executes and atomically commits all the results to memory when the transaction succeeds or aborts and cancels all the results if the transaction fails. Transactional memory mechanism provide the Atomicity, Consistency and Isolation qualities. These transactions can safely execute in parallel, and only serial execution is performed in the case of data conflicts, which happen when several threads access the same memory address at the same time and at least one is write operation.When a data conflict occurs, it will cause a rollback and all the results will be canceled.
 
+The recent development is Intel’s TSX and the implementation in Haswell.Haswell is the first x86 processor to feature hardware transactional memory.Programmers only need to specify
+critical sections for transactional executions, the processor transparently performs data conflict detection, transaction commit and rollback.TSX tracks the read-set and write-set of a transaction, at a 64B cache line granularity. The read-set and write-set are respectively all the cache lines that the transaction has read from, or written to during execution. A transaction encounters a conflict if a cache line in its read-set is written by another thread, or if a cache line in its write-set is read or written by another thread.
 \subsection{LLVM}
 LLVM
 
@@ -68,7 +85,7 @@ In this paper we assume a powerful attacker who has the ability
 to read arbitrary areas of memory and overwrite all writable
 areas of memory. However, the attacker is unable to write to executable
 memory (marked read-only) or read the value of special
-registers our compiler reserves. 
+registers our compiler reserves.
 
 Peapods is focused on protecting user-level programs such as PolarSSL RSA decryption calculation, and we do not address protecting the kernel in this paper.
 We assume that the kernel does not save any user-level registers—
@@ -237,6 +254,7 @@ In addition, the user needs to call the START(args\_list) function before calcul
 After users complete the above work, Peapods will automatically use HTM to protect sensitive information. Therefore, we can provide security enhancements for various types of cryptographic software systems without refactoring the entire cryptographic software in the presence of security vulnerabilities.The amount of code that the user needs to add is only a few hundred lines to several thousand lines (depending on the number and type of sensitive variables, the number of splits, etc.), the proportion compared to the total code volume of the cryptographic software system (usually several hundred thousand lines) is small.
 
 It is worth noting that all user programs in the system need to be compiled with our modified LLVM compiler to ensure the security of the master key.
+%用户使用代码示例
 \section{SECURITY DISCUSSION}
 
 %侧信道 dump内存
