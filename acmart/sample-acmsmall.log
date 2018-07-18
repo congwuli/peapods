@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  12 JUL 2018 17:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  13 JUL 2018 11:57
 entering extended mode
 **C:/Users/lcw/peapods/acmart/sample-acmsmall.tex
 (C:/Users/lcw/peapods/acmart/sample-acmsmall.tex
@@ -775,7 +775,7 @@ Underfull \vbox (badness 2310) has occurred while \output is active []
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ¯ in font cmr10!
 
-Underfull \vbox (badness 1024) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4.4]
 Missing character: There is no ¡ in font cmr10!
@@ -783,27 +783,33 @@ Missing character: There is no ª in font cmr10!
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5504) has occurred while \output is active []
 
  [5.5]
+Missing character: There is no £ in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no £ in font cmr10!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<figure/design.pdf, id=152, 401.77303pt x 275.62672pt>
+File: figure/design.pdf Graphic file (type pdf)
+ <use figure/design.pdf>
+Package pdftex.def Info: figure/design.pdf used on input line 179.
+(pdftex.def)             Requested size: 356.23782pt x 244.39856pt.
 
- [7.7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
+[7.7 <C:/Users/lcw/peapods/acmart/figure/design.pdf>] [8.8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 254.
 
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
-
-Underfull \vbox (badness 4096) has occurred while \output is active []
-
- [8.8]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
+ [9.9]
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
@@ -829,23 +835,21 @@ Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 
-Overfull \hbox (32.51093pt too wide) in paragraph at lines 252--263
+Overfull \hbox (32.51093pt too wide) in paragraph at lines 271--282
  [][] 
  []
 
-[9.9]
-Underfull \vbox (badness 1939) has occurred while \output is active []
-
- [10.10]
+[10.10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11.11]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 332.
 
 [12.12]
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
+ [13.13]
 Missing character: There is no Ó in font cmssbx10!
 Missing character: There is no ë in font cmssbx10!
 Missing character: There is no µ in font cmssbx10!
@@ -855,21 +859,24 @@ Missing character: There is no È in font cmssbx10!
 Missing character: There is no ½ in font cmssbx10!
 Missing character: There is no Ï in font cmssbx10!
  (C:\Users\lcw\peapods\acmart\comment.cut)
-(C:\Users\lcw\peapods\acmart\sample-acmsmall.bbl)) [13.13]
+(C:\Users\lcw\peapods\acmart\sample-acmsmall.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 41.
+
+)) [14.14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
-
-(C:\Users\lcw\peapods\acmart\sample-acmsmall.aux)
+ (C:\Users\lcw\peapods\acmart\sample-acmsmall.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `sample-acmsmall.out' has not changed.
-(rerunfilecheck)             Checksum: BA5312F6B472CE8EB44C1C5B9CA096EF;3873.
+(rerunfilecheck)             Checksum: 6C7F7ED25084EF8945CD355E1F9F4F54;3969.
  ) 
 Here is how much of TeX's memory you used:
- 14999 strings out of 495354
- 214468 string characters out of 3183131
- 393125 words of memory out of 3000000
- 17561 multiletter control sequences out of 15000+200000
+ 15025 strings out of 495354
+ 214768 string characters out of 3183131
+ 394177 words of memory out of 3000000
+ 17578 multiletter control sequences out of 15000+200000
  18107 words of font info for 123 fonts, out of 3000000 for 9000
  175 hyphenation exceptions out of 8191
  60i,18n,94p,1964b,1123s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -888,9 +895,9 @@ iKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fon
 ts/type1/public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
 public/cm-super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
 -super/sfrm1000.pfb>
-Output written on sample-acmsmall.pdf (13 pages, 268111 bytes).
+Output written on sample-acmsmall.pdf (14 pages, 313461 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 22745 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 22758 words of extra memory for PDF output out of 24883 (max. 10000000)
 

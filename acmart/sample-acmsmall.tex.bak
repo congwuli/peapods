@@ -4,8 +4,6 @@
 
 \usepackage{hyperref}
 \usepackage{ccmap}
-\usepackage{algorithm}
-\usepackage{algorithmic}
 \usepackage{listings}
 \usepackage{array}
 \usepackage{multirow}

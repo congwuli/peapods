@@ -12,10 +12,13 @@ However, existing programs face various memory disclosure attacks and the securi
 %简要介绍内存泄漏攻击带来的威胁
 There are many security threats when the cryptographic algorithm is running. One of them is sensitive information stored in the memory, such as a key, which is stolen by an adversary.One of the attacks is a memory disclosure attack. Memory disclosure attacks are read-only memory attacks where the adversary can obtain the contents of the memory but cannot tamper with it. Memory disclosure attacks include software attacks and hardware attacks.Software attack means that the attacker does not physically touch the attack target. It uses software vulnerabilities to bypass the system protection mechanism and illegally accesses the data in the memory.Such as OpenSSL heart bleeding attack, using OpenSSL heartbeat vulnerability, so that remote attackers can obtain a server 64KB memory data by constructing a malicious request.Hardware attack means that an attacker can physically contact an attack target and use a physical method to read the memory of the target.Such as cold-boot attack, using the delay disappearance effect of DRAM, directly read the contents of the memory chip.In short, memory disclosure attacks pose a serious threat to plain-text sensitive data in memory.
 
+%敏感信息分为持续性敏感信息和非持续性敏感信息 分别存放在不同区域
 Therefore, the sensitive data needs to find a secure temporary storage area so that it can be stored in clear text and can also be accessed by instructions in the cryptographic algorithm implementation.This secure temporary storage area should enable the sensitive information that needs to be protected when the cryptographic algorithm is run to be stored in clear text. The information out of this area needs to be encrypted and saved.There are two types of sensitive information that need to be protected: (1) Persistent sensitive information, such as a master key, is used to encrypt information leaving a secure area and decrypt information entering a secure area, (2) Non-persistent sensitive information, such as temporary data generated during the calculation that can be used to derive the key.For the master key, it is always stored in secure storage in clear text whether or not the sensitive information calculation is to be performed.The non-persistent sensitive information is generated when the master key is used to decrypt or calculate after the calculation starts. The plaintext is stored in the secure area. When the sensitive information calculation is completed, it is cleared from the secure area.
 
+%为对抗物理内存攻击，需要硬件保护机制。寄存器是一个理想的安全存储。
 For physical memory attacks in memory disclosure attacks, any storage area that can restrict access only at the software level is insecure. Secure storage should have physical mechanisms to restrict access.Each CPU core or each hardware thread has a separate set of registers that can only be read by the currently executing instruction.Therefore, the register is the storage resource that runs the program exclusive and it is an ideal secure storage.
 
+%事务内存机制则提供了一个合适的安全临时存储区域
 In addition, the transactional memory mechanism provides a suitable secure temporary storage area. Transactional memory mechanisms implemented with hardware, such as TSX, can effectively defend against physical memory attacks.
 %事务内存机制提供了合适的安全存储区域，使用硬件方法实现的事务内存机制，如TSX，可以有效地防御physical memory attacks
 
@@ -49,12 +52,12 @@ These types of attacks pose a great threat to users' sensitive data.We need a co
 
 \subsection{TSX}
 %TSX and RTM
-%介绍事务内存和RTM接口
+%介绍事务内存
 Transactional memory is a software technique that simplifies writing concurrent programs.The main idea is to declare a region of code as a transaction. A transaction executes and atomically commits all the results to memory when the transaction succeeds or aborts and cancels all the results if the transaction fails. Transactional memory mechanism provide the Atomicity, Consistency and Isolation qualities. These transactions can safely execute in parallel, and only serial execution is performed in the case of data conflicts, which happen when several threads access the same memory address at the same time and at least one is write operation.When a data conflict occurs, it will cause a rollback and all the results will be canceled.
-
+%TSX
 The recent development is Intel’s TSX and the implementation in Haswell.Haswell is the first x86 processor to feature hardware transactional memory.Programmers only need to specify
 critical sections for transactional executions, the processor transparently performs data conflict detection, transaction commit and rollback.TSX tracks the read-set and write-set of a transaction, at a 64B cache line granularity. The read-set and write-set are respectively all the cache lines that the transaction has read from, or written to during execution. A transaction encounters a conflict if a cache line in its read-set is written by another thread, or if a cache line in its write-set is read or written by another thread.
-
+%HLE和RTM
 TSX provides two interfaces for programmers to make use of transactional memory. The first mode is Hardware Lock Elision(HLE), provides a pair of compiler hints:xacquire and xrelease to enter or exit the critical section.Once abort happens, the processor will roll back to the original state, and then automatically restarts the execution in a legacy manner. The second mode is Restricted Transactional Memory (RTM), provides three new instructions, XBEGIN, XEND and XABORT, to start, commit, and abort a transactional execution.When using the RTM interface, the programmer needs to specify a fallback handler for the XBEGIN instruction as a parameter and write the fallback handler logic. When a transaction aborts, the program jumps to the specified fallback handler and executes the corresponding program logic.
 \subsection{LLVM}
 
@@ -80,7 +83,7 @@ Our work is to modify the intermediate representation of the source code through
 \section{DESIGN}
 
 
-\subsection{ THREAT MODEL AND security goals}
+\subsection{ THREAT MODEL }
 
 
 In this paper we assume a powerful attacker who has the ability
@@ -98,13 +101,13 @@ threading libraries may also require changes to ensure these registers
 are not saved.
 
 %仔细参考CCFI的安全模型 dump内存情况下如何进行防御
-1.We assume that HTM is correctly implemented.
+%1.We assume that HTM is correctly implemented.
 
-2.We assume that the integrity of the operating system kernel can be guaranteed.
+%2.We assume that the integrity of the operating system kernel can be guaranteed.
 
-3.We assume that the attacker cannot access the master key stored in the XMM7 register by executing the attack code.The attacker first needs to destroy the integrity of the control flow, there are currently many schemes that use the hardware lock mechanism to implement the control flow integrity.
+%3.We assume that the attacker cannot access the master key stored in the XMM7 register by executing the attack code.The attacker first needs to destroy the integrity of the control flow, there are currently many schemes that use the hardware lock mechanism to implement the control flow integrity.
 
-4.We assume that the attacker has the ability to read data in memory, so we need to ensure that the master key stored in the XMM7 register is not leaked to memory. We modified the LLVM compilation, setting the XMM7 register as a reserved register, the LLVM compiler ensures that the code cannot control the reserved register. At the same time, we also modify the user-level threading libraries to prevent these registers been saved
+%4.We assume that the attacker has the ability to read data in memory, so we need to ensure that the master key stored in the XMM7 register is not leaked to memory. We modified the LLVM compilation, setting the XMM7 register as a reserved register, the LLVM compiler ensures that the code cannot control the reserved register. At the same time, we also modify the user-level threading libraries to prevent these registers been saved
 
 %为了抵抗内存泄漏攻击 包括软件内存攻击和冷启动攻击
 %应用层解决方案，与操作系统无关
@@ -158,7 +161,7 @@ We use an AES master key to protect user sensitive data. The AES master key is g
 \begin{figure*}[!htb]
 \centering
 \includegraphics[width=0.9\textwidth]{design.pdf}
-\caption{Peapods总体架构}
+\caption{Structure of Peapods}
 \label{fig:design}
 \end{figure*}
 
@@ -220,12 +223,47 @@ For sensitive variables with undecided compile-time addresses, such as pointer-t
 
 %结构体代码
 
+\lstset{
+    numbers=left,
+    numberstyle= \tiny,
+    keywordstyle= \color{ blue!70},
+    commentstyle= \color{red!50!green!50!blue!50},
+    frame=shadowbox, % 阴影效果
+    rulesepcolor= \color{ red!20!green!20!blue!20} ,
+    escapeinside=``, % 英文分号中可写入中文
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em
+}
+\begin{lstlisting}
+struct args{
+    unsigned char *data;
+    int len;
+    struct args* next;
+}*args_list,args_list_next;
+\end{lstlisting}
+
 When users want to assign values to sensitive variables, they need to call START(args\_list) before assigning sensitive variables and END(args\_list) after assigning values.In IR PASS, we add logic to automatically encrypt and decrypt sensitive variables in utility functions such as START and END. In this way, the entire assignment process is performed under transaction protection. After the transaction is started, the sensitive variables are decrypted, and then encrypt sensitive variables before ending the transaction. Therefore, there is always only a ciphertext sensitive variable in memory.
 
 It is worth noting that reading and writing files within a transaction will cause the transaction to abort. Therefore, Peapods cannot provide security protection during the assignment phase if the user reads a file to assign sensitive variables.In fact, in this case, the user can still call START(args list) after reading the file, call END(args list) after assignment, and clear the plaintext intermediate variable to make the sensitive variable exist in ciphertext after the assignment.However, in the process of reading a file, sensitive information is exposed in memory in the form of clear text. It is assumed that there is no memory disclosure attack at this time.At the same time, there is a backup of sensitive information in the hard disk. An attacker can also read the hard disk to obtain sensitive information. The user needs to delete the file containing sensitive information after reading the file.
 
 \subsection{Sensitive information protection}
-We provide users with three utility functions, and users call these utility functions as needed.We track all function call instructions in IR PASS, recognize the call to START, END, and TEM. Then we insert the corresponding intermediate representation code of encryption and decryption before the END function call instruction, after the START function call instruction, and both before and after the TEM function call instruction respectively.
+We provide users with three utility functions.We track all function call instructions in IR PASS, recognize the call to START, END, and TEM. Then we insert the corresponding intermediate representation code of encryption and decryption before the END function call instruction, after the START function call instruction, and both before and after the TEM function call instruction respectively.
+
+\begin{table}[htbp]
+ \caption{\label{tab:libfunc} Utility functions list}
+ \centering
+ \begin{tabular}{|c|c|p{3cm}<{\centering} | p{5cm}<{\centering} |}
+  \toprule
+  function name & function & usage method & Implementation logic \\
+  \midrule
+  START(args\_list) & Start a transaction & Used before sensitive operations begin & (1)XBEGIN；(2)get the master key from the XMM7 register；(3)generate AES context using the master key；(4)AES decryption of CBC mode for identified sensitive data variables \\
+  \midrule
+  END(args\_list) & End a transaction & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Erase intermediate results；(3)XEND \\
+  \midrule
+  TEM(args\_list) & Split a transaction & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.；(3)Erase intermediate results；(4)XEND；(5)XBEGIN；(6)get the master key from the XMM7 register；(7)generate AES context using the master key；(8)AES decryption of CBC mode for identified sensitive data variables \\
+  \bottomrule
+ \end{tabular}
+\end{table}
 %三个功能函数的具体实现细节表
 \subsection{Page fault handling}
 We protected Polarssl RSA decryption calculations with peapods, during the execution of the program, we used perf, a performance analysis tool to help us knowing the program's operating status. Perf relies on the Intel performance monitoring facility, which supports precision-event-based sampling. This function can record the current processor state when a specific event occurs.We monitored the RTM\_RETIRED.ABORTED event, which was triggered when RTM execution was terminated.Based on the processor status acquired, we can find out the cause of the termination.Perf reported a lot of the termination of the transaction caused by the pages fault. After analysis and exploration, we found that these pages fault mainly come from pages fault of the code segment.
@@ -258,11 +296,48 @@ In addition, the user needs to call the START(args\_list) function before calcul
 After users complete the above work, Peapods will automatically use HTM to protect sensitive information. Therefore, we can provide security enhancements for various types of cryptographic software systems without refactoring the entire cryptographic software in the presence of security vulnerabilities.The amount of code that the user needs to add is only a few hundred lines to several thousand lines (depending on the number and type of sensitive variables, the number of splits, etc.), the proportion compared to the total code volume of the cryptographic software system (usually several hundred thousand lines) is small.
 
 It is worth noting that all user programs in the system need to be compiled with our modified LLVM compiler to ensure the security of the master key.
+
+\lstset{
+    numbers=left,
+    numberstyle= \tiny,
+    keywordstyle= \color{ blue!70},
+    commentstyle= \color{red!50!green!50!blue!50},
+    frame=shadowbox, % 阴影效果
+    rulesepcolor= \color{ red!20!green!20!blue!20} ,
+    escapeinside=``, % 英文分号中可写入中文
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em,
+    basicstyle=\footnotesize,
+}
+\begin{lstlisting}
+__attribute__((annotation"Private_Key")) unsighed char secret[16];
+
+START(args_list);
+    secret={\
+        0x45,0x46,0x88,0x32,\
+        0x2a,0x6d,0x8c,0x31,\
+        0x58,0xf2,0x30,0x02,\
+        0x4f,0x32,0x7d,0x22\
+    };
+END(args_list);
+
+START(args_list);
+    secret_protect_compute_1();
+TEM(args_list);
+    secret_protect_compute_2();
+
+    ...
+
+TEM(args_list);
+    secret_protect_compute_n();
+END(args_list);
+\end{lstlisting}
+
 %用户使用代码示例
 \section{SECURITY DISCUSSION}
 
 %侧信道 dump内存
-When the computer undergoes a core dump, because the Peapods transaction is interrupted, the master key, plaintext sensitive information, and intermediate calculations that have already been calculated are cleared.Therefore, the attacker still cannot obtain sensitive information in plaintext.
+When the computer undergoes a core dump, as the Peapods transaction is interrupted, the master key, plaintext sensitive information, and intermediate calculations that have already been calculated are all cleared.Therefore, the attacker still cannot obtain sensitive information in plaintext.
 
 Attackers may also attack sensitive information through the side channel.Fortunately, Peapods is immune to cache-based time-side channel attacks because AES-NI itself is not subject to any known side-channel attacks and the sensitive information calculation is fully implemented in the cache.
 
