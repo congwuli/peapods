@@ -1,0 +1,7 @@
+
+\section{SECURITY DISCUSSION}
+
+%²àÐÅµÀ dumpÄÚ´æ
+When the computer undergoes a core dump, as the Peapods transaction is interrupted, the master key, plaintext sensitive information, and intermediate calculations that have already been calculated are all cleared.Therefore, the attacker still cannot obtain sensitive information in plaintext.
+
+Attackers may also attack sensitive information through the side channel.Fortunately, Peapods is immune to cache-based time-side channel attacks because AES-NI itself is not subject to any known side-channel attacks and the sensitive information calculation is fully implemented in the cache.

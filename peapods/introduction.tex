@@ -1,0 +1,42 @@
+
+\section{INTRODUCTION}
+
+Cryptographic algorithms are widely used in cryptographic systems and play a significant role.When we use cryptographic algorithms to implement cryptographic systems, we usually use existing Open Source cryptographic libraries to complete the required calculations and combine them with application functions.
+The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic systems is not guaranteed, it will cause extreme problems for users.On the other hand, the speed of computing directly affects the user's experience with the cryptographic system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services.
+{\color{blue}In recent years, many memory protection schemes have been proposed. Copker Mimosa RegRSA . Although these schemes can protect memory information in some scenarios, there are some shortcomings:(1) Only work in kernel-mode. This may have an impact on kernel security and it is difficult to support the existing user-mode cryptographic algorithm library. (2) Only support specific algorithms. Refactoring code will introduce a lot of extra work.Therefore, existing application layer cryptographic software system still face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.We need a more principled approach to secure the key in the application layer cryptographic software system.}
+
+%介绍peapods的必要性
+
+%\textbf{Memory Disclosure Attacks}
+
+%简要介绍内存泄漏攻击带来的威胁
+%There are many security threats when the cryptographic algorithm is running. One of them is sensitive information stored in the memory, such as a key, which is stolen by an adversary.One of the attacks is a memory disclosure attack. Memory disclosure attacks are read-only memory attacks where the adversary can obtain the contents of the memory but cannot tamper with it. Memory disclosure attacks include software attacks and hardware attacks.Software attack means that the attacker does not physically touch the attack target. It uses software vulnerabilities to bypass the system protection mechanism and illegally accesses the data in the memory.Such as OpenSSL heart bleeding attack, using OpenSSL heartbeat vulnerability, so that remote attackers can obtain a server 64KB memory data by constructing a malicious request.Hardware attack means that an attacker can physically contact an attack target and use a physical method to read the memory of the target.Such as cold-boot attack, using the delay disappearance effect of DRAM, directly read the contents of the memory chip.In short, memory disclosure attacks pose a serious threat to plain-text sensitive data in memory.
+
+%敏感信息分为持续性敏感信息和非持续性敏感信息 分别存放在不同区域
+%Therefore, the sensitive data needs to find a secure temporary storage area so that it can be stored in clear text and can also be accessed by instructions in the cryptographic algorithm implementation.This secure temporary storage area should enable the sensitive information that needs to be protected when the cryptographic algorithm is run to be stored in clear text. The information out of this area needs to be encrypted and saved.There are two types of sensitive information that need to be protected: (1) Persistent sensitive information, such as a master key, is used to encrypt information leaving a secure area and decrypt information entering a secure area, (2) Non-persistent sensitive information, such as temporary data generated during the calculation that can be used to derive the key.For the master key, it is always stored in secure storage in clear text whether or not the sensitive information calculation is to be performed.The non-persistent sensitive information is generated when the master key is used to decrypt or calculate after the calculation starts. The plaintext is stored in the secure area. When the sensitive information calculation is completed, it is cleared from the secure area.
+
+%为对抗物理内存攻击，需要硬件保护机制。寄存器是一个理想的安全存储。
+%For physical memory attacks in memory disclosure attacks, any storage area that can restrict access only at the software level is insecure. Secure storage should have physical mechanisms to restrict access.Each CPU core or each hardware thread has a separate set of registers that can only be read by the currently executing instruction.Therefore, the register is the storage resource that runs the program exclusive and it is an ideal secure storage.
+
+%事务内存机制则提供了一个合适的安全临时存储区域
+%In addition, the transactional memory mechanism provides a suitable secure temporary storage area. Transactional memory mechanisms implemented with hardware, such as TSX, can effectively defend against physical memory attacks.
+%事务内存机制提供了合适的安全存储区域，使用硬件方法实现的事务内存机制，如TSX，可以有效地防御physical memory attacks
+
+\textbf{Peapods}
+%介绍peapods的贡献
+
+{\color{blue}Peapods is a automated compiler enhancement tool that provides security enhancements for application layer cryptographic software systems that can defend against software memory attacks and cold-boot attack.
+
+In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information. Although peapods is mainly dedicated to the protection of keys in cryptographic systems, peapods can also protect user sensitive information when necessary.}
+
+%Peapods can automatically encrypt and decrypt sensitive variables when users add a small amount of code. Therefore, we can provide security enhancements for various types of cryptographic software systems without the need to reconstruct the entire cryptographic software system and add a small amount of source code in the presence of security vulnerabilities. On the platform supporting Intel TSX features, we implemented the Peapods prototype based on the transactional memory mechanism, and through simulated attacks, we proved that Peapods can effectively prevent malicious code from accessing sensitive information. Moreover, compared to Polar SSL protected by Peapods and non-protected Polar SSL, the performance loss is only 10\% within an acceptable range.
+
+\textbf{Implementation}
+%实现
+
+We implemented Peapods in LLVM for x86 and recompiled PolarSSL and all of its dependencies.We use Peapods to protect Polarssl RSA decryption calculations and users only need to make a few code changes(less than 1000 lines).Experiment shows that compared to PolarSSL protected by Peapods and non-protected PolarSSL, the overhead is only 10\% within an acceptable range.
+
+{\color{blue}\textbf{Our contributions}
+
+(1) We propose a scheme that can resist memory disclosure attacks in user-mode. (2) Based on LLVM, we implemented Peapods, a tool that automatically implements key protection and it is independent of the cryptographic algorithm and operating system, programmers do not need to refactor the entire cryptographic software, just add a small amount of code, peapods can provide security enhancements for various cryptographic software systems.The experimental evaluation showed that peapods only introduces a small overhead.}
+% Head 1
