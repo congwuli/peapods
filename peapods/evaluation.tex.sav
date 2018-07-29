@@ -59,6 +59,7 @@ transaction by instrumenting the source code that begins and ends transactions w
  \end{tabular}
 \end{table}
 
+It is not difficult to find that 
 
 %abortÂÊµÄÍ¼
 \subsection{Impact on Concurrent Processes}

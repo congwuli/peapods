@@ -25,7 +25,7 @@ The cryptographic software system is linked to the user's core interests. When u
 \textbf{Peapods}
 %½éÉÜpeapodsµÄ¹±Ï×
 
-{\color{blue}Peapods is a automated compiler enhancement tool that provides security enhancements for application layer cryptographic software systems that can defend against software memory attacks and cold-boot attack.
+{\color{blue}Peapods is a automated compiler enhancement tool that provides security enhancements for application layer cryptographic systems that can defend against software memory attacks and cold-boot attack.
 
 In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information. Although peapods is mainly dedicated to the protection of keys in cryptographic systems, peapods can also protect user sensitive information when necessary.}
 

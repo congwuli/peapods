@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  18 JUL 2018 18:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  27 JUL 2018 15:28
 entering extended mode
 **C:/Users/lcw/peapods/peapods/peapods.tex
 (C:/Users/lcw/peapods/peapods/peapods.tex
@@ -574,9 +574,85 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip74
 \subfig@bottom=\skip75
 )
+(D:\software\tex\CTEX\MiKTeX\tex\latex\diagbox\diagbox.sty
+Package: diagbox 2011/11/23 v2.0 Making table heads with diagonal lines
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\pict2e\pict2e.sty
+Package: pict2e 2011/04/05 v0.2y Improved picture commands (HjG,RN,JT)
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\00miktex\pict2e.cfg
+File: pict2e.cfg 2005/12/29 v1.0 MiKTeX 'pict2e' configuration
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(D:\software\tex\CTEX\MiKTeX\tex\latex\pict2e\p2e-pdftex.def
+File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks35
+\@arclen=\dimen164
+\@arcrad=\dimen165
+\@tempdimd=\dimen166
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count138
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count139
+\FP@xia=\count140
+\FP@xib=\count141
+\FP@xfa=\count142
+\FP@xfb=\count143
+\FP@rega=\count144
+\FP@regb=\count145
+\FP@regs=\count146
+\FP@times=\count147
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count148
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(D:\software\tex\CTEX\MiKTeX\tex\latex\fp\fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\diagbox@boxa=\box36
+\diagbox@boxb=\box37
+\diagbox@boxm=\box38
+\diagbox@wd=\dimen167
+\diagbox@ht=\dimen168
+\diagbox@sepl=\dimen169
+\diagbox@sepr=\dimen170
+)
 (D:\software\tex\CTEX\MiKTeX\tex\latex\algorithm2e\algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count138
+\c@AlgoLine=\count149
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -609,67 +685,67 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skiplength=\skip81
 \algomargin=\skip82
 \skipalgocfslide=\skip83
-\algowidth=\dimen164
-\inoutsize=\dimen165
-\inoutline=\dimen166
-\interspacetitleruled=\dimen167
-\interspacealgoruled=\dimen168
-\interspacetitleboxruled=\dimen169
-\algocf@inoutbox=\box36
-\algocf@inputbox=\box37
+\algowidth=\dimen171
+\inoutsize=\dimen172
+\inoutline=\dimen173
+\interspacetitleruled=\dimen174
+\interspacealgoruled=\dimen175
+\interspacetitleboxruled=\dimen176
+\algocf@inoutbox=\box39
+\algocf@inputbox=\box40
 \AlCapSkip=\skip84
 \AlCapHSkip=\skip85
-\algocf@nlbox=\box38
-\algocf@hangingbox=\box39
-\algocf@capbox=\box40
+\algocf@nlbox=\box41
+\algocf@hangingbox=\box42
+\algocf@capbox=\box43
 \algoheightruledefault=\skip86
 \algoheightrule=\skip87
 \algotitleheightruledefault=\skip88
 \algotitleheightrule=\skip89
-\c@algocfline=\count139
-\c@algocfproc=\count140
-\c@algocf=\count141
-\algocf@algoframe=\box41
-\algocf@algobox=\box42
+\c@algocfline=\count150
+\c@algocfproc=\count151
+\c@algocf=\count152
+\algocf@algoframe=\box44
+\algocf@algobox=\box45
 )
-Class acmart Info: Using journal code tweb on input line 25.
+Class acmart Info: Using journal code tweb on input line 26.
  (C:\Users\lcw\peapods\peapods\peapods.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 55.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 55.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
  (D:\software\tex\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 
-LaTeX Warning: File u.cmap not found on input line 54.
+LaTeX Warning: File u.cmap not found on input line 55.
 
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
 (D:\software\tex\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 54.
+LaTeX Info: Redefining \microtypecontext on input line 55.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -685,8 +761,8 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 (RS)
 )
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring ON on input line 54.
+\AtBeginShipoutBox=\box46
+Package hyperref Info: Link coloring ON on input line 55.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -694,11 +770,11 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (D:\software\tex\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 (C:\Users\lcw\peapods\peapods\peapods.out)
 (C:\Users\lcw\peapods\peapods\peapods.out)
@@ -706,17 +782,17 @@ LaTeX Info: Redefining \nameref on input line 54.
 
 (D:\software\tex\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen170
-\scratchbox=\box44
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen171
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count154
+\scratchdimen=\dimen177
+\scratchbox=\box47
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen178
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+\everyMPtoPDFconversion=\toks37
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -757,9 +833,9 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count149
+\c@lstlisting=\count160
 
-LaTeX Warning: File ts1.cmap not found on input line 135.
+LaTeX Warning: File ts1.cmap not found on input line 136.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -776,7 +852,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ¯ in font cmr10!
 
-Underfull \vbox (badness 2310) has occurred while \output is active []
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
  [4.4])
 (C:\Users\lcw\peapods\peapods\design.tex
@@ -822,25 +898,41 @@ Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 
-Overfull \hbox (32.51093pt too wide) in paragraph at lines 73--84
+Overfull \hbox (43.33316pt too wide) in paragraph at lines 73--84
  [][] 
  []
 
 
-Underfull \vbox (badness 1024) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9.9]
 [10.10]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
 
-Underfull \vbox (badness 1859) has occurred while \output is active []
+Underfull \vbox (badness 4859) has occurred while \output is active []
 
  [11.11])
 (C:\Users\lcw\peapods\peapods\security-discussion.tex)
-(C:\Users\lcw\peapods\peapods\evaluation.tex [12.12]
+(C:\Users\lcw\peapods\peapods\evaluation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12.12]
+<figure/rsa_local_peapods.pdf, id=210, 378.80421pt x 167.70955pt>
+File: figure/rsa_local_peapods.pdf Graphic file (type pdf)
+
+<use figure/rsa_local_peapods.pdf>
+Package pdftex.def Info: figure/rsa_local_peapods.pdf used on input line 10.
+(pdftex.def)             Requested size: 356.23782pt x 157.72632pt.
+ [13.13 <C:/Users/lcw/peapods/peapods/figure/rsa_local_peapods.pdf>]
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
+ <figure/stream.pdf, id=228, 378.80421pt x 184.4792pt>
+File: figure/stream.pdf Graphic file (type pdf)
+
+<use figure/stream.pdf>
+Package pdftex.def Info: figure/stream.pdf used on input line 72.
+(pdftex.def)             Requested size: 356.23782pt x 173.49773pt.
 Missing character: There is no Ó in font cmssbx10!
 Missing character: There is no ë in font cmssbx10!
 Missing character: There is no µ in font cmssbx10!
@@ -849,29 +941,32 @@ Missing character: There is no ± in font cmssbx10!
 Missing character: There is no È in font cmssbx10!
 Missing character: There is no ½ in font cmssbx10!
 Missing character: There is no Ï in font cmssbx10!
-)
-(C:\Users\lcw\peapods\peapods\related-work.tex)
+) (C:\Users\lcw\peapods\peapods\related-work.tex
+Underfull \vbox (badness 3058) has occurred while \output is active []
+
+ [14.14]
+[15.15 <C:/Users/lcw/peapods/peapods/figure/stream.pdf>])
 (C:\Users\lcw\peapods\peapods\conclusion.tex
 (C:\Users\lcw\peapods\peapods\comment.cut)
 (C:\Users\lcw\peapods\peapods\peapods.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 41.
 
-)) [13.13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
+)) [16.16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (C:\Users\lcw\peapods\peapods\peapods.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `peapods.out' has not changed.
-(rerunfilecheck)             Checksum: 0D8252852A6515D3581E5888787BE234;3847.
+(rerunfilecheck)             Checksum: 30A670C44CD0ECCA0548580F18408E8C;4114.
  ) 
 Here is how much of TeX's memory you used:
- 15034 strings out of 495354
- 215149 string characters out of 3183131
- 385101 words of memory out of 3000000
- 17570 multiletter control sequences out of 15000+200000
- 18158 words of font info for 124 fonts, out of 3000000 for 9000
+ 15915 strings out of 495354
+ 225394 string characters out of 3183131
+ 419937 words of memory out of 3000000
+ 18389 multiletter control sequences out of 15000+200000
+ 18209 words of font info for 125 fonts, out of 3000000 for 9000
  175 hyphenation exceptions out of 8191
  60i,18n,94p,1957b,1738s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/software/tex/CTEX/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/so
@@ -889,9 +984,9 @@ iKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fon
 ts/type1/public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
 public/cm-super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
 -super/sfrm1000.pfb>
-Output written on peapods.pdf (13 pages, 272286 bytes).
+Output written on peapods.pdf (16 pages, 314428 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 22745 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 22763 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -71,15 +71,15 @@ We provide users with three utility functions.We track all function call instruc
  \caption{\label{tab:libfunc} Utility functions list}
  \centering
  \begin{tabular}{|c|c|p{3cm}<{\centering} | p{5cm}<{\centering} |}
-  \toprule
-  function name & function & usage method & Implementation logic \\
-  \midrule
-  START(args\_list) & Start a transaction & Used before sensitive operations begin & (1)XBEGIN；(2)get the master key from the XMM7 register；(3)generate AES context using the master key；(4)AES decryption of CBC mode for identified sensitive data variables \\
-  \midrule
-  END(args\_list) & End a transaction & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Erase intermediate results；(3)XEND \\
-  \midrule
-  TEM(args\_list) & Split a transaction & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.；(3)Erase intermediate results；(4)XEND；(5)XBEGIN；(6)get the master key from the XMM7 register；(7)generate AES context using the master key；(8)AES decryption of CBC mode for identified sensitive data variables \\
-  \bottomrule
+  \hline
+  \textbf{Function Name} & \textbf{Function} & \textbf{Usage Method} & \textbf{Implementation logic} \\
+  \hline
+  T\_START(args\_list) & Start a transaction & Used before sensitive operations begin & (1)XBEGIN；(2)get the master key from the XMM7 register；(3)generate AES context using the master key；(4)AES decryption of CBC mode for identified sensitive data variables \\
+  \hline
+  T\_END(args\_list) & End a transaction & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Erase intermediate results；(3)XEND \\
+  \hline
+  T\_SPLIT(args\_list) & Split a transaction & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables；(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.；(3)Erase intermediate results；(4)XEND；(5)XBEGIN；(6)get the master key from the XMM7 register；(7)generate AES context using the master key；(8)AES decryption of CBC mode for identified sensitive data variables \\
+  \hline
  \end{tabular}
 \end{table}
 %三个功能函数的具体实现细节表

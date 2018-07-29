@@ -56,7 +56,7 @@
 % Title portion. Note the short title for running heads
 
 
-\title{Peapods:OS-Independent Memory Confidentiality for Cryptographic Engines}
+\title{Peapods:OS-Independent Memory Confidentiality for Applied Cryptography}
 \author{Li Congwu}
 \affiliation{%
   \institution{State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences}
