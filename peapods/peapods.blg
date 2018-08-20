@@ -1,5 +1,80 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: peapods.aux
 The style file: ACM-Reference-Format.bst
-I found no \citation commands---while reading file peapods.aux
-Database file #1: sample-bibliography.bib
-(There was 1 error message)
+Database file #1: peapodstex.bib
+Warning--empty publisher in Birgisson2008Enforcing
+Warning--empty address in Birgisson2008Enforcing
+Warning--empty publisher in Bocchino2008Software
+Warning--empty address in Bocchino2008Software
+Warning--empty publisher in Broadwell2003Scrash
+Warning--empty address in Broadwell2003Scrash
+Warning--empty publisher in Chen2016Shreds
+Warning--empty address in Chen2016Shreds
+Warning--empty publisher in Couceiro2009D2STM
+Warning--empty address in Couceiro2009D2STM
+Warning--empty publisher in Damron2006Hybrid
+Warning--empty address in Damron2006Hybrid
+Warning--empty publisher in Drescher2016RamCrypt
+Warning--empty address in Drescher2016RamCrypt
+Warning--empty publisher in Freiling2011TRESOR
+Warning--empty address in Freiling2011TRESOR
+Warning--empty address in Garmany2013PRIME
+Warning--empty publisher in Guan2014Copker
+Warning--empty address in Guan2014Copker
+Warning--page numbers missing in both pages and numpages fields in Guan2014Copker
+Warning--empty publisher in Guan2015Protecting
+Warning--empty address in Guan2015Protecting
+Warning--empty publisher in Hammond2004Transactional
+Warning--empty address in Hammond2004Transactional
+Warning--empty booktitle in Harris2005Composable
+Warning--empty publisher in Harris2005Composable
+Warning--empty address in Harris2005Composable
+Warning--empty publisher in Harrison2007Protecting
+Warning--empty address in Harrison2007Protecting
+Warning--empty publisher in Henson2013Beyond
+Warning--empty address in Henson2013Beyond
+Warning--empty booktitle in Herlihy2006A
+Warning--empty publisher in Herlihy2006A
+Warning--empty address in Herlihy2006A
+Warning--empty publisher in extensions
+Warning--empty address in extensions
+Warning--empty publisher in Jacobi2012Transactional
+Warning--empty address in Jacobi2012Transactional
+Warning--empty publisher in Jang2016Breaking
+Warning--empty address in Jang2016Breaking
+Warning--empty publisher in Kotselidis2008DiSTM
+Warning--empty address in Kotselidis2008DiSTM
+Warning--empty booktitle in Kumar2006Hybrid
+Warning--empty publisher in Kumar2006Hybrid
+Warning--empty address in Kumar2006Hybrid
+Warning--empty publisher in Kuvaiskii2016HAFT
+Warning--empty address in Kuvaiskii2016HAFT
+Warning--empty publisher in Liu2014Concurrent
+Warning--empty address in Liu2014Concurrent
+Warning--empty publisher in Mashtizadeh2015CCFI
+Warning--empty address in Mashtizadeh2015CCFI
+Warning--empty publisher in Moore2006LogTM
+Warning--empty address in Moore2006LogTM
+Warning--empty booktitle in Rajwar2005Virtualizing
+Warning--empty publisher in Rajwar2005Virtualizing
+Warning--empty address in Rajwar2005Virtualizing
+Warning--empty publisher in Saad2011Snake
+Warning--empty address in Saad2011Snake
+Warning--empty booktitle in Schindewolf2009Towards
+Warning--empty publisher in Schindewolf2009Towards
+Warning--empty address in Schindewolf2009Towards
+Warning--page numbers missing in both pages and numpages fields in Schindewolf2009Towards
+Warning--no journal in shavit1995software
+Warning--no number and no volume in shavit1995software
+Warning--empty publisher in Shih2017T
+Warning--empty address in Shih2017T
+Warning--page numbers missing in both pages and numpages fields in Shih2017T
+Warning--no number and no volume in Shinde2015Preventing
+Warning--page numbers missing in both pages and numpages fields in Shinde2015Preventing
+Warning--empty publisher in Szekeres2013Eternal
+Warning--empty address in Szekeres2013Eternal
+Warning--no journal in Wang2012Evaluation
+Warning--no number and no volume in Wang2012Evaluation
+Warning--empty publisher in Xu2015Controlled
+Warning--empty address in Xu2015Controlled
+Warning--empty address in Zhao2016RegRSA
+(There were 76 warnings)

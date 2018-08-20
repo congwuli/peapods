@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  27 JUL 2018 15:28
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  20 AUG 2018 10:57
 entering extended mode
 **C:/Users/lcw/peapods/peapods/peapods.tex
 (C:/Users/lcw/peapods/peapods/peapods.tex
@@ -852,7 +852,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ¯ in font cmr10!
 
-Underfull \vbox (badness 1024) has occurred while \output is active []
+Underfull \vbox (badness 2310) has occurred while \output is active []
 
  [4.4])
 (C:\Users\lcw\peapods\peapods\design.tex
@@ -864,15 +864,23 @@ Missing character: There is no ª in font cmr10!
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6])
-(C:\Users\lcw\peapods\peapods\implementation.tex [7.7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+(C:\Users\lcw\peapods\peapods\implementation.tex
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [7.7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
 
 (D:\software\tex\CTEX\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
  [8.8]
+Overfull \hbox (1.44807pt too wide) in paragraph at lines 64--65
+[]\OT1/cmr/m/n/10 (-20) When user-s wan-t to as-sign val-ues to sen-si-tive var
+i-ables, they need to cal-l T[]START(args[]list)
+ []
+
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
@@ -898,7 +906,7 @@ Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 
-Overfull \hbox (43.33316pt too wide) in paragraph at lines 73--84
+Overfull \hbox (43.33316pt too wide) in paragraph at lines 74--85
  [][] 
  []
 
@@ -914,11 +922,8 @@ Underfull \vbox (badness 4859) has occurred while \output is active []
 
  [11.11])
 (C:\Users\lcw\peapods\peapods\security-discussion.tex)
-(C:\Users\lcw\peapods\peapods\evaluation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12.12]
-<figure/rsa_local_peapods.pdf, id=210, 378.80421pt x 167.70955pt>
+(C:\Users\lcw\peapods\peapods\evaluation.tex [12.12]
+<figure/rsa_local_peapods.pdf, id=206, 378.80421pt x 167.70955pt>
 File: figure/rsa_local_peapods.pdf Graphic file (type pdf)
 
 <use figure/rsa_local_peapods.pdf>
@@ -927,7 +932,7 @@ Package pdftex.def Info: figure/rsa_local_peapods.pdf used on input line 10.
  [13.13 <C:/Users/lcw/peapods/peapods/figure/rsa_local_peapods.pdf>]
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
- <figure/stream.pdf, id=228, 378.80421pt x 184.4792pt>
+ <figure/stream.pdf, id=222, 378.80421pt x 184.4792pt>
 File: figure/stream.pdf Graphic file (type pdf)
 
 <use figure/stream.pdf>
@@ -942,31 +947,38 @@ Missing character: There is no È in font cmssbx10!
 Missing character: There is no ½ in font cmssbx10!
 Missing character: There is no Ï in font cmssbx10!
 ) (C:\Users\lcw\peapods\peapods\related-work.tex
-Underfull \vbox (badness 3058) has occurred while \output is active []
-
- [14.14]
-[15.15 <C:/Users/lcw/peapods/peapods/figure/stream.pdf>])
+[14.14] [15.15 <C:/Users/lcw/peapods/peapods/figure/stream.pdf>])
 (C:\Users\lcw\peapods\peapods\conclusion.tex
-(C:\Users\lcw\peapods\peapods\comment.cut)
-(C:\Users\lcw\peapods\peapods\peapods.bbl
+(C:\Users\lcw\peapods\peapods\comment.cut))
+(C:\Users\lcw\peapods\peapods\peapods.bbl [16.16]
+Missing character: There is no ¨ in font cmr8!
+Missing character: There is no ª in font cmr8!
+Missing character: There is no ¨ in font cmr8!
+Missing character: There is no ¹ in font cmr8!
+Missing character: There is no ¨ in font cmr8!
+Missing character: There is no ¢ in font cmr8!
 
-Package natbib Warning: Empty `thebibliography' environment on input line 41.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)) [16.16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+ [17.17]
+Missing character: There is no ¨ in font cmr8!
+Missing character: There is no ¦ in font cmr8!
+)
+[18.18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (C:\Users\lcw\peapods\peapods\peapods.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `peapods.out' has not changed.
-(rerunfilecheck)             Checksum: 30A670C44CD0ECCA0548580F18408E8C;4114.
+(rerunfilecheck)             Checksum: 6B393BA28C07DBCF61F1D461803DD71B;3944.
  ) 
 Here is how much of TeX's memory you used:
- 15915 strings out of 495354
- 225394 string characters out of 3183131
- 419937 words of memory out of 3000000
- 18389 multiletter control sequences out of 15000+200000
- 18209 words of font info for 125 fonts, out of 3000000 for 9000
+ 16147 strings out of 495354
+ 229901 string characters out of 3183131
+ 418857 words of memory out of 3000000
+ 18521 multiletter control sequences out of 15000+200000
+ 20729 words of font info for 154 fonts, out of 3000000 for 9000
  175 hyphenation exceptions out of 8191
  60i,18n,94p,1957b,1738s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/software/tex/CTEX/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/so
@@ -980,13 +992,14 @@ ss10.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb>
 <D:/software/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/so
 ftware/tex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/software/t
 ex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/software/tex/CTEX/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fon
-ts/type1/public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
-public/cm-super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
--super/sfrm1000.pfb>
-Output written on peapods.pdf (16 pages, 314428 bytes).
+iKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><D:/software/tex/CTEX/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
+public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
+-super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm-super/sf
+rm1000.pfb>
+Output written on peapods.pdf (18 pages, 362182 bytes).
 PDF statistics:
- 316 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 22763 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 24803 words of extra memory for PDF output out of 24883 (max. 10000000)
 

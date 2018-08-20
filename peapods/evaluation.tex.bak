@@ -59,6 +59,7 @@ transaction by instrumenting the source code that begins and ends transactions w
  \end{tabular}
 \end{table}
 
+It is not difficult to find that transaction time and memory usage have an impact on the transaction abort.The impact of transaction time on transaction abort is very intuitive. As the transaction time increases, the transaction abort rate increases greatly.When the memory usage is small, the change in memory usage has a greater impact on the transaction abort. As the memory usage increases, this effect is gradually reduced.When the memory usage increases to a certain value, the transaction abort rate increases rapidly (not shown in the tables), which is caused by the cache capacity limit.
 
 %abortÂÊµÄÍ¼
 \subsection{Impact on Concurrent Processes}

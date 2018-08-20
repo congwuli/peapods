@@ -1,0 +1,313 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%			   It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+
+@inproceedings{Harrison2007Protecting,
+  title={Protecting Cryptographic Keys from Memory Disclosure Attacks},
+  author={Harrison, Keith and Xu, Shouhuai},
+  booktitle={Ieee/ifip International Conference on Dependable Systems and Networks},
+  pages={137-143},
+  year={2007},
+}
+
+@inproceedings{Broadwell2003Scrash,
+  title={Scrash: a system for generating secure crash information},
+  author={Broadwell, Pete and Harren, Matt and Sastry, Naveen},
+  booktitle={Conference on Usenix Security Symposium},
+  pages={19-19},
+  year={2003},
+}
+
+@inproceedings{Chen2016Shreds,
+  title={Shreds: Fine-Grained Execution Units with Private Memory},
+  author={Chen, Yaohui and Reymondjohnson, Sebassujeen and Sun, Zhichuang and Lu, Long},
+  booktitle={Security and Privacy},
+  pages={56-71},
+  year={2016},
+}
+
+@inproceedings{Henson2013Beyond,
+  title={Beyond full disk encryption: protection on security-enhanced commodity processors},
+  author={Henson, Michael and Taylor, Stephen},
+  booktitle={International Conference on Applied Cryptography and Network Security},
+  pages={307-321},
+  year={2013},
+}
+
+@inproceedings{Freiling2011TRESOR,
+  title={TRESOR runs encryption securely outside RAM},
+  author={Freiling, Felix C. and Dewald, Andreas},
+  booktitle={Usenix Conference on Security},
+  pages={17-17},
+  year={2011},
+}
+
+@book{Garmany2013PRIME,
+  title={PRIME: private RSA infrastructure for memory-less encryption},
+  author={Garmany, Behrad and M¨¹ller, Tilo},
+  publisher={ACM},
+  pages={149-158},
+  year={2013},
+}
+
+@book{Zhao2016RegRSA,
+  title={RegRSA: Using Registers as Buffers to Resist Memory Disclosure Attacks},
+  author={Zhao, Yuan and Lin, Jingqiang and Pan, Wuqiong and Xue, Cong and Zheng, Fangyu and Ma, Ziqiang},
+  publisher={Springer International Publishing},
+  pages={293-307},
+  year={2016},
+}
+
+@inproceedings{Guan2014Copker,
+  title={Copker: Computing with Private Keys without RAM},
+  author={Guan, Le and Lin, Jingqiang and Luo, Bo and Jing, Jiwu},
+  booktitle={Network and Distributed System Security Symposium},
+  year={2014},
+}
+
+@inproceedings{Guan2015Protecting,
+  title={Protecting Private Keys against Memory Disclosure Attacks Using Hardware Transactional Memory},
+  author={Guan, Le and Lin, Jingqiang and Luo, Bo and Jing, Jiwu and Wang, Jing},
+  booktitle={IEEE Symposium on Security and Privacy},
+  pages={3-19},
+  year={2015},
+}
+
+@incollection{extensions,
+    author = {{Intel}},
+    title = {Chapter 8: {Intel} transactional memory synchronization extensions},
+    booktitle = {{Intel} Architecture Instruction Set Extensions Programming Reference},
+    year = {2012}
+}
+
+@inproceedings{Drescher2016RamCrypt,
+  title={RamCrypt: Kernel-based Address Space Encryption for User-mode Processes},
+  author={Drescher, Gabor and Backes, Michael},
+  booktitle={ACM on Asia Conference on Computer and Communications Security},
+  pages={919-924},
+  year={2016},
+}
+
+@inproceedings{Mashtizadeh2015CCFI,
+  title={CCFI:Cryptographically Enforced Control Flow Integrity},
+  author={Mashtizadeh, Ali Jose and Bittau, Andrea and Dan, Boneh},
+  booktitle={ACM Sigsac Conference on Computer and Communications Security},
+  pages={941-951},
+  year={2015},
+}
+
+@misc{sgx,
+    author = {{Intel}},
+    title = {Intel software guard extensions programming reference},
+    year = {2014}
+}
+
+@inproceedings{Hammond2004Transactional,
+  title={Transactional Memory Coherence and Consistency},
+  author={Hammond, Lance and Wong, Vicky and Chen, Mike and Carlstrom, Brian D and Davis, John D and Hertzberg, Ben and Prabhu, Manohar K and Wijaya, Honggo and Kozyrakis, Christos and Olukotun, Kunle},
+  booktitle={International Symposium on Computer Architecture, 2004. Proceedings},
+  pages={102-113},
+  year={2004},
+}
+
+@article{Ananian2006Unbounded,
+  title={Unbounded Transactional Memory},
+  author={Ananian, C. Scott and Asanovic, Krste and Kuszmaul, Bradley C. and Leiserson, Charles E. and Lie, Sean},
+  journal={IEEE Micro},
+  volume={26},
+  number={1},
+  pages={59-69},
+  year={2006},
+}
+
+@article{Dice2009Early,
+  title={Early experience with a commercial hardware transactional memory implementation},
+  author={Dice, Dave and Lev, Yossi and Moir, Mark and Nussbaum, Daniel},
+  journal={ACM SIGPLAN Notices},
+  volume={44},
+  number={3},
+  pages={157-168},
+  year={2009},
+}
+
+@inproceedings{Jacobi2012Transactional,
+  title={Transactional Memory Architecture and Implementation for IBM System Z},
+  author={Jacobi, Christian and Slegel, Timothy and Dan, Greiner},
+  booktitle={Ieee/acm International Symposium on Microarchitecture},
+  pages={25-36},
+  year={2012},
+}
+
+@article{Wang2012Evaluation,
+  title={Evaluation of Blue Gene/Q hardware support for transactional memories},
+  author={Wang, Amy and Gaudet, Matthew and Wu, Peng and Amaral, Jos¨¦ Nelson and Ohmacht, Martin and Barton, Christopher and Silvera, Raul and Michael, Maged},
+  pages={127-136},
+  year={2012},
+}
+
+@article{Carlstrom2006The,
+  title={The Atomos transactional programming language},
+  author={Carlstrom, Brian D and Mcdonald, Austen and Chafi, Hassan and Chung, Jae Woong and Minh, Chi Cao and Kozyrakis, Christos and Olukotun, Kunle},
+  journal={Acm Sigplan Notices},
+  volume={41},
+  number={6},
+  pages={1-13},
+  year={2006},
+}
+
+@inproceedings{Harris2005Composable,
+  title={Composable memory transactions},
+  author={Harris, Tim and Marlow, Simon and Peyton-Jones, Simon and Herlihy, Maurice},
+  pages={48-60},
+  year={2005},
+}
+
+@article{Ni2008Design,
+  title={Design and implementation of transactional constructs for C/C++},
+  author={Ni, Yang and Welc, Adam and Adl-Tabatabai, Ali Reza and Bach, Moshe and Berkowits, Sion and Cownie, James and Geva, Robert and Kozhukow, Sergey and Narayanaswamy, Ravi and Olivier, Jeffrey},
+  journal={Acm Sigplan Notices},
+  volume={43},
+  number={10},
+  pages={195-212},
+  year={2008},
+}
+
+@article{shavit1995software,
+title={Software transactional memory},
+author={Shavit, Nir and Touitou, Dan},
+pages={204--213},
+year={1995},
+}
+
+@inproceedings{Schindewolf2009Towards,
+  title={Towards Transactional Memory Support for GCC},
+  author={Schindewolf, Martin and Cohen, Albert and Karl, Wolfgang and Marongiu, Andrea and Benini, Luca},
+  year={2009},
+}
+
+@inproceedings{Herlihy2006A,
+  title={A flexible framework for implementing software transactional memory},
+  author={Herlihy, Maurice and Luchangco, Victor and Moir, Mark},
+  pages={253-262},
+  year={2006},
+}
+
+@inproceedings{Moore2006LogTM,
+  title={LogTM: log-based transactional memory},
+  author={Moore, K. E. and Bobba, J. and Moravan, M. J. and Hill, M. D.},
+  booktitle={The Twelfth International Symposium on High-Performance Computer Architecture},
+  pages={254-265},
+  year={2006},
+}
+
+@inproceedings{Damron2006Hybrid,
+  title={Hybrid transactional memory},
+  author={Damron, Peter and Fedorova, Alexandra and Lev, Yossi and Luchangco, Victor and Moir, Mark and Nussbaum, Daniel},
+  booktitle={International Conference on Architectural Support for Programming Languages \& Operating Systems},
+  pages={336-346},
+  year={2006},
+}
+
+@inproceedings{Kumar2006Hybrid,
+  title={Hybrid transactional memory},
+  author={Kumar, Sanjeev and Chu, Michael and Hughes, Christopher J. and Kundu, Partha and Nguyen, Anthony},
+  pages={209-220},
+  year={2006},
+}
+
+@inproceedings{Rajwar2005Virtualizing,
+  title={Virtualizing Transactional Memory},
+  author={Rajwar, Ravi and Herlihy, Maurice and Lai, Konrad},
+  pages={494-505},
+  year={2005},
+}
+
+@inproceedings{Bocchino2008Software,
+  title={Software transactional memory for large scale clusters},
+  author={Bocchino, Robert L. and Adve, Vikram S. and Chamberlain, Bradford L.},
+  booktitle={ACM Sigplan Symposium on Principles and Practice of Parallel Programming},
+  pages={247-258},
+  year={2008},
+}
+
+@inproceedings{Couceiro2009D2STM,
+  title={D2STM: Dependable Distributed Software Transactional Memory},
+  author={Couceiro, Maria and Romano, Paolo and Carvalho, Nuno and Rodrigues, Lu¨ªs},
+  booktitle={IEEE Pacific Rim International Symposium on Dependable Computing},
+  pages={307-313},
+  year={2009},
+}
+
+@inproceedings{Kotselidis2008DiSTM,
+  title={DiSTM: A Software Transactional Memory Framework for Clusters},
+  author={Kotselidis, Christos and Ansari, Mohammad and Jarvis, Kim and Luj¨¢n, Mikel and Kirkham, Chris and Watson, Ian},
+  booktitle={International Conference on Parallel Processing},
+  pages={51-58},
+  year={2008},
+}
+
+@article{Romano2010Cloud,
+  title={Cloud-TM:harnessing the cloud with distributed transactional memories},
+  author={Romano, Paolo and Rodrigues, Luis and Carvalho, Nuno},
+  journal={Acm Sigops Operating Systems Review},
+  volume={44},
+  number={2},
+  pages={1-6},
+  year={2010},
+}
+
+@inproceedings{Saad2011Snake,
+  title={Snake: Control Flow Distributed Software Transactional Memory},
+  author={Saad, Mohamed and Ravindran, Binoy},
+  booktitle={International Conference on Stabilization, Safety, and Security of Distributed Systems},
+  pages={238-252},
+  year={2011},
+}
+
+@inproceedings{Birgisson2008Enforcing,
+  title={Enforcing authorization policies using transactional memory introspection},
+  author={Birgisson, Arnar and Dhawan, Mohan and Ganapathy, Vinod and Iftode, Liviu},
+  booktitle={ACM Conference on Computer and Communications Security, CCS 2008, Alexandria, Virginia, Usa, October},
+  pages={223-234},
+  year={2008},
+}
+
+@inproceedings{Szekeres2013Eternal,
+  title={Eternal War in Memory},
+  author={Szekeres, Laszlo and Payer, Mathias and Wei, Tao and Song, Dawn},
+  booktitle={Security and Privacy},
+  pages={48-62},
+  year={2013},
+}
+
+@inproceedings{Liu2014Concurrent,
+  title={Concurrent and consistent virtual machine introspection with hardware transactional memory},
+  author={Liu, Yutao and Xia, Yubin and Guan, Haibing and Zang, Binyu and Chen, Haibo},
+  booktitle={IEEE  International Symposium on High PERFORMANCE Computer Architecture},
+  pages={416-427},
+  year={2014},
+}

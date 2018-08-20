@@ -38,4 +38,497 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Ananian, Asanovic, Kuszmaul, Leiserson, and
+  Lie}{Ananian et~al\mbox{.}}{2006}]%
+        {Ananian2006Unbounded}
+\bibfield{author}{\bibinfo{person}{C.~Scott Ananian}, \bibinfo{person}{Krste
+  Asanovic}, \bibinfo{person}{Bradley~C. Kuszmaul}, \bibinfo{person}{Charles~E.
+  Leiserson}, {and} \bibinfo{person}{Sean Lie}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Unbounded Transactional Memory}.
+\newblock \bibinfo{journal}{{\em IEEE Micro\/}} \bibinfo{volume}{26},
+  \bibinfo{number}{1} (\bibinfo{year}{2006}), \bibinfo{pages}{59--69}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Birgisson, Dhawan, Ganapathy, and
+  Iftode}{Birgisson et~al\mbox{.}}{2008}]%
+        {Birgisson2008Enforcing}
+\bibfield{author}{\bibinfo{person}{Arnar Birgisson}, \bibinfo{person}{Mohan
+  Dhawan}, \bibinfo{person}{Vinod Ganapathy}, {and} \bibinfo{person}{Liviu
+  Iftode}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Enforcing authorization policies using
+  transactional memory introspection}. In \bibinfo{booktitle}{{\em ACM
+  Conference on Computer and Communications Security, CCS 2008, Alexandria,
+  Virginia, Usa, October}}. \bibinfo{pages}{223--234}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bocchino, Adve, and Chamberlain}{Bocchino
+  et~al\mbox{.}}{2008}]%
+        {Bocchino2008Software}
+\bibfield{author}{\bibinfo{person}{Robert~L. Bocchino},
+  \bibinfo{person}{Vikram~S. Adve}, {and} \bibinfo{person}{Bradford~L.
+  Chamberlain}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Software transactional memory for large scale
+  clusters}. In \bibinfo{booktitle}{{\em ACM Sigplan Symposium on Principles
+  and Practice of Parallel Programming}}. \bibinfo{pages}{247--258}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Broadwell, Harren, and Sastry}{Broadwell
+  et~al\mbox{.}}{2003}]%
+        {Broadwell2003Scrash}
+\bibfield{author}{\bibinfo{person}{Pete Broadwell}, \bibinfo{person}{Matt
+  Harren}, {and} \bibinfo{person}{Naveen Sastry}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Scrash: a system for generating secure crash
+  information}. In \bibinfo{booktitle}{{\em Conference on Usenix Security
+  Symposium}}. \bibinfo{pages}{19--19}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Carlstrom, Mcdonald, Chafi, Chung, Minh,
+  Kozyrakis, and Olukotun}{Carlstrom et~al\mbox{.}}{2006}]%
+        {Carlstrom2006The}
+\bibfield{author}{\bibinfo{person}{Brian~D Carlstrom}, \bibinfo{person}{Austen
+  Mcdonald}, \bibinfo{person}{Hassan Chafi}, \bibinfo{person}{Jae~Woong Chung},
+  \bibinfo{person}{Chi~Cao Minh}, \bibinfo{person}{Christos Kozyrakis}, {and}
+  \bibinfo{person}{Kunle Olukotun}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{The Atomos transactional programming language}.
+\newblock \bibinfo{journal}{{\em Acm Sigplan Notices\/}} \bibinfo{volume}{41},
+  \bibinfo{number}{6} (\bibinfo{year}{2006}), \bibinfo{pages}{1--13}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Reymondjohnson, Sun, and Lu}{Chen
+  et~al\mbox{.}}{2016}]%
+        {Chen2016Shreds}
+\bibfield{author}{\bibinfo{person}{Yaohui Chen}, \bibinfo{person}{Sebassujeen
+  Reymondjohnson}, \bibinfo{person}{Zhichuang Sun}, {and} \bibinfo{person}{Long
+  Lu}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Shreds: Fine-Grained Execution Units with Private
+  Memory}. In \bibinfo{booktitle}{{\em Security and Privacy}}.
+  \bibinfo{pages}{56--71}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Couceiro, Romano, Carvalho, and
+  Rodrigues}{Couceiro et~al\mbox{.}}{2009}]%
+        {Couceiro2009D2STM}
+\bibfield{author}{\bibinfo{person}{Maria Couceiro}, \bibinfo{person}{Paolo
+  Romano}, \bibinfo{person}{Nuno Carvalho}, {and} \bibinfo{person}{Lu¨ªs
+  Rodrigues}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{D2STM: Dependable Distributed Software
+  Transactional Memory}. In \bibinfo{booktitle}{{\em IEEE Pacific Rim
+  International Symposium on Dependable Computing}}. \bibinfo{pages}{307--313}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Damron, Fedorova, Lev, Luchangco, Moir, and
+  Nussbaum}{Damron et~al\mbox{.}}{2006}]%
+        {Damron2006Hybrid}
+\bibfield{author}{\bibinfo{person}{Peter Damron}, \bibinfo{person}{Alexandra
+  Fedorova}, \bibinfo{person}{Yossi Lev}, \bibinfo{person}{Victor Luchangco},
+  \bibinfo{person}{Mark Moir}, {and} \bibinfo{person}{Daniel Nussbaum}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Hybrid transactional memory}. In
+  \bibinfo{booktitle}{{\em International Conference on Architectural Support
+  for Programming Languages \& Operating Systems}}. \bibinfo{pages}{336--346}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dice, Lev, Moir, and Nussbaum}{Dice
+  et~al\mbox{.}}{2009}]%
+        {Dice2009Early}
+\bibfield{author}{\bibinfo{person}{Dave Dice}, \bibinfo{person}{Yossi Lev},
+  \bibinfo{person}{Mark Moir}, {and} \bibinfo{person}{Daniel Nussbaum}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Early experience with a commercial hardware
+  transactional memory implementation}.
+\newblock \bibinfo{journal}{{\em ACM SIGPLAN Notices\/}} \bibinfo{volume}{44},
+  \bibinfo{number}{3} (\bibinfo{year}{2009}), \bibinfo{pages}{157--168}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Drescher and Backes}{Drescher and
+  Backes}{2016}]%
+        {Drescher2016RamCrypt}
+\bibfield{author}{\bibinfo{person}{Gabor Drescher} {and}
+  \bibinfo{person}{Michael Backes}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{RamCrypt: Kernel-based Address Space Encryption for
+  User-mode Processes}. In \bibinfo{booktitle}{{\em ACM on Asia Conference on
+  Computer and Communications Security}}. \bibinfo{pages}{919--924}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Freiling and Dewald}{Freiling and
+  Dewald}{2011}]%
+        {Freiling2011TRESOR}
+\bibfield{author}{\bibinfo{person}{Felix~C. Freiling} {and}
+  \bibinfo{person}{Andreas Dewald}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{TRESOR runs encryption securely outside RAM}. In
+  \bibinfo{booktitle}{{\em Usenix Conference on Security}}.
+  \bibinfo{pages}{17--17}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Garmany and M¨¹ller}{Garmany and
+  M¨¹ller}{2013}]%
+        {Garmany2013PRIME}
+\bibfield{author}{\bibinfo{person}{Behrad Garmany} {and} \bibinfo{person}{Tilo
+  M¨¹ller}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em PRIME: private RSA infrastructure for
+  memory-less encryption}}.
+\newblock \bibinfo{publisher}{ACM}. 149--158 pages.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Guan, Lin, Luo, and Jing}{Guan
+  et~al\mbox{.}}{2014}]%
+        {Guan2014Copker}
+\bibfield{author}{\bibinfo{person}{Le Guan}, \bibinfo{person}{Jingqiang Lin},
+  \bibinfo{person}{Bo Luo}, {and} \bibinfo{person}{Jiwu Jing}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Copker: Computing with Private Keys without RAM}.
+  In \bibinfo{booktitle}{{\em Network and Distributed System Security
+  Symposium}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Guan, Lin, Luo, Jing, and Wang}{Guan
+  et~al\mbox{.}}{2015}]%
+        {Guan2015Protecting}
+\bibfield{author}{\bibinfo{person}{Le Guan}, \bibinfo{person}{Jingqiang Lin},
+  \bibinfo{person}{Bo Luo}, \bibinfo{person}{Jiwu Jing}, {and}
+  \bibinfo{person}{Jing Wang}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Protecting Private Keys against Memory Disclosure
+  Attacks Using Hardware Transactional Memory}. In \bibinfo{booktitle}{{\em
+  IEEE Symposium on Security and Privacy}}. \bibinfo{pages}{3--19}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Hammond, Wong, Chen, Carlstrom, Davis,
+  Hertzberg, Prabhu, Wijaya, Kozyrakis, and Olukotun}{Hammond
+  et~al\mbox{.}}{2004}]%
+        {Hammond2004Transactional}
+\bibfield{author}{\bibinfo{person}{Lance Hammond}, \bibinfo{person}{Vicky
+  Wong}, \bibinfo{person}{Mike Chen}, \bibinfo{person}{Brian~D Carlstrom},
+  \bibinfo{person}{John~D Davis}, \bibinfo{person}{Ben Hertzberg},
+  \bibinfo{person}{Manohar~K Prabhu}, \bibinfo{person}{Honggo Wijaya},
+  \bibinfo{person}{Christos Kozyrakis}, {and} \bibinfo{person}{Kunle
+  Olukotun}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Transactional Memory Coherence and Consistency}. In
+  \bibinfo{booktitle}{{\em International Symposium on Computer Architecture,
+  2004. Proceedings}}. \bibinfo{pages}{102--113}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Harris, Marlow, Peyton-Jones, and
+  Herlihy}{Harris et~al\mbox{.}}{2005}]%
+        {Harris2005Composable}
+\bibfield{author}{\bibinfo{person}{Tim Harris}, \bibinfo{person}{Simon Marlow},
+  \bibinfo{person}{Simon Peyton-Jones}, {and} \bibinfo{person}{Maurice
+  Herlihy}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Composable memory transactions}.
+  \bibinfo{pages}{48--60}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Harrison and Xu}{Harrison and Xu}{2007}]%
+        {Harrison2007Protecting}
+\bibfield{author}{\bibinfo{person}{Keith Harrison} {and}
+  \bibinfo{person}{Shouhuai Xu}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Protecting Cryptographic Keys from Memory
+  Disclosure Attacks}. In \bibinfo{booktitle}{{\em Ieee/ifip International
+  Conference on Dependable Systems and Networks}}. \bibinfo{pages}{137--143}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Henson and Taylor}{Henson and Taylor}{2013}]%
+        {Henson2013Beyond}
+\bibfield{author}{\bibinfo{person}{Michael Henson} {and}
+  \bibinfo{person}{Stephen Taylor}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Beyond full disk encryption: protection on
+  security-enhanced commodity processors}. In \bibinfo{booktitle}{{\em
+  International Conference on Applied Cryptography and Network Security}}.
+  \bibinfo{pages}{307--321}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Herlihy, Luchangco, and Moir}{Herlihy
+  et~al\mbox{.}}{2006}]%
+        {Herlihy2006A}
+\bibfield{author}{\bibinfo{person}{Maurice Herlihy}, \bibinfo{person}{Victor
+  Luchangco}, {and} \bibinfo{person}{Mark Moir}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{A flexible framework for implementing software
+  transactional memory}. \bibinfo{pages}{253--262}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Intel}}{{Intel}}{2012}]%
+        {extensions}
+\bibfield{author}{\bibinfo{person}{{Intel}}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Chapter 8: {Intel} transactional memory
+  synchronization extensions}.
+\newblock In \bibinfo{booktitle}{{\em {Intel} Architecture Instruction Set
+  Extensions Programming Reference}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Intel}}{{Intel}}{2014}]%
+        {sgx}
+\bibfield{author}{\bibinfo{person}{{Intel}}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{title}{Intel software guard extensions programming
+  reference}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jacobi, Slegel, and Dan}{Jacobi
+  et~al\mbox{.}}{2012}]%
+        {Jacobi2012Transactional}
+\bibfield{author}{\bibinfo{person}{Christian Jacobi}, \bibinfo{person}{Timothy
+  Slegel}, {and} \bibinfo{person}{Greiner Dan}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Transactional Memory Architecture and
+  Implementation for IBM System Z}. In \bibinfo{booktitle}{{\em Ieee/acm
+  International Symposium on Microarchitecture}}. \bibinfo{pages}{25--36}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jang, Lee, and Kim}{Jang
+  et~al\mbox{.}}{2016}]%
+        {Jang2016Breaking}
+\bibfield{author}{\bibinfo{person}{Yeongjin Jang}, \bibinfo{person}{Sangho
+  Lee}, {and} \bibinfo{person}{Taesoo Kim}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Breaking Kernel Address Space Layout Randomization
+  with Intel TSX}. In \bibinfo{booktitle}{{\em ACM Sigsac Conference on
+  Computer and Communications Security}}. \bibinfo{pages}{380--392}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kotselidis, Ansari, Jarvis, Luj¨¢n, Kirkham,
+  and Watson}{Kotselidis et~al\mbox{.}}{2008}]%
+        {Kotselidis2008DiSTM}
+\bibfield{author}{\bibinfo{person}{Christos Kotselidis},
+  \bibinfo{person}{Mohammad Ansari}, \bibinfo{person}{Kim Jarvis},
+  \bibinfo{person}{Mikel Luj¨¢n}, \bibinfo{person}{Chris Kirkham}, {and}
+  \bibinfo{person}{Ian Watson}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{DiSTM: A Software Transactional Memory Framework
+  for Clusters}. In \bibinfo{booktitle}{{\em International Conference on
+  Parallel Processing}}. \bibinfo{pages}{51--58}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kumar, Chu, Hughes, Kundu, and Nguyen}{Kumar
+  et~al\mbox{.}}{2006}]%
+        {Kumar2006Hybrid}
+\bibfield{author}{\bibinfo{person}{Sanjeev Kumar}, \bibinfo{person}{Michael
+  Chu}, \bibinfo{person}{Christopher~J. Hughes}, \bibinfo{person}{Partha
+  Kundu}, {and} \bibinfo{person}{Anthony Nguyen}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Hybrid transactional memory}.
+  \bibinfo{pages}{209--220}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kuvaiskii, Faqeh, Bhatotia, Felber, and
+  Fetzer}{Kuvaiskii et~al\mbox{.}}{2016}]%
+        {Kuvaiskii2016HAFT}
+\bibfield{author}{\bibinfo{person}{Dmitrii Kuvaiskii}, \bibinfo{person}{Rasha
+  Faqeh}, \bibinfo{person}{Pramod Bhatotia}, \bibinfo{person}{Pascal Felber},
+  {and} \bibinfo{person}{Christof Fetzer}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{HAFT: hardware-assisted fault tolerance}. In
+  \bibinfo{booktitle}{{\em Eleventh European Conference on Computer Systems}}.
+  \bibinfo{pages}{25}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Xia, Guan, Zang, and Chen}{Liu
+  et~al\mbox{.}}{2014}]%
+        {Liu2014Concurrent}
+\bibfield{author}{\bibinfo{person}{Yutao Liu}, \bibinfo{person}{Yubin Xia},
+  \bibinfo{person}{Haibing Guan}, \bibinfo{person}{Binyu Zang}, {and}
+  \bibinfo{person}{Haibo Chen}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Concurrent and consistent virtual machine
+  introspection with hardware transactional memory}. In
+  \bibinfo{booktitle}{{\em IEEE International Symposium on High PERFORMANCE
+  Computer Architecture}}. \bibinfo{pages}{416--427}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mashtizadeh, Bittau, and Dan}{Mashtizadeh
+  et~al\mbox{.}}{2015}]%
+        {Mashtizadeh2015CCFI}
+\bibfield{author}{\bibinfo{person}{Ali~Jose Mashtizadeh},
+  \bibinfo{person}{Andrea Bittau}, {and} \bibinfo{person}{Boneh Dan}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{CCFI:Cryptographically Enforced Control Flow
+  Integrity}. In \bibinfo{booktitle}{{\em ACM Sigsac Conference on Computer and
+  Communications Security}}. \bibinfo{pages}{941--951}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Moore, Bobba, Moravan, and Hill}{Moore
+  et~al\mbox{.}}{2006}]%
+        {Moore2006LogTM}
+\bibfield{author}{\bibinfo{person}{K.~E. Moore}, \bibinfo{person}{J. Bobba},
+  \bibinfo{person}{M.~J. Moravan}, {and} \bibinfo{person}{M.~D. Hill}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{LogTM: log-based transactional memory}. In
+  \bibinfo{booktitle}{{\em The Twelfth International Symposium on
+  High-Performance Computer Architecture}}. \bibinfo{pages}{254--265}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ni, Welc, Adl-Tabatabai, Bach, Berkowits,
+  Cownie, Geva, Kozhukow, Narayanaswamy, and Olivier}{Ni et~al\mbox{.}}{2008}]%
+        {Ni2008Design}
+\bibfield{author}{\bibinfo{person}{Yang Ni}, \bibinfo{person}{Adam Welc},
+  \bibinfo{person}{Ali~Reza Adl-Tabatabai}, \bibinfo{person}{Moshe Bach},
+  \bibinfo{person}{Sion Berkowits}, \bibinfo{person}{James Cownie},
+  \bibinfo{person}{Robert Geva}, \bibinfo{person}{Sergey Kozhukow},
+  \bibinfo{person}{Ravi Narayanaswamy}, {and} \bibinfo{person}{Jeffrey
+  Olivier}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Design and implementation of transactional
+  constructs for C/C++}.
+\newblock \bibinfo{journal}{{\em Acm Sigplan Notices\/}} \bibinfo{volume}{43},
+  \bibinfo{number}{10} (\bibinfo{year}{2008}), \bibinfo{pages}{195--212}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rajwar, Herlihy, and Lai}{Rajwar
+  et~al\mbox{.}}{2005}]%
+        {Rajwar2005Virtualizing}
+\bibfield{author}{\bibinfo{person}{Ravi Rajwar}, \bibinfo{person}{Maurice
+  Herlihy}, {and} \bibinfo{person}{Konrad Lai}.}
+  \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Virtualizing Transactional Memory}.
+  \bibinfo{pages}{494--505}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Romano, Rodrigues, and Carvalho}{Romano
+  et~al\mbox{.}}{2010}]%
+        {Romano2010Cloud}
+\bibfield{author}{\bibinfo{person}{Paolo Romano}, \bibinfo{person}{Luis
+  Rodrigues}, {and} \bibinfo{person}{Nuno Carvalho}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Cloud-TM:harnessing the cloud with distributed
+  transactional memories}.
+\newblock \bibinfo{journal}{{\em Acm Sigops Operating Systems Review\/}}
+  \bibinfo{volume}{44}, \bibinfo{number}{2} (\bibinfo{year}{2010}),
+  \bibinfo{pages}{1--6}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Saad and Ravindran}{Saad and
+  Ravindran}{2011}]%
+        {Saad2011Snake}
+\bibfield{author}{\bibinfo{person}{Mohamed Saad} {and} \bibinfo{person}{Binoy
+  Ravindran}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Snake: Control Flow Distributed Software
+  Transactional Memory}. In \bibinfo{booktitle}{{\em International Conference
+  on Stabilization, Safety, and Security of Distributed Systems}}.
+  \bibinfo{pages}{238--252}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Schindewolf, Cohen, Karl, Marongiu, and
+  Benini}{Schindewolf et~al\mbox{.}}{2009}]%
+        {Schindewolf2009Towards}
+\bibfield{author}{\bibinfo{person}{Martin Schindewolf}, \bibinfo{person}{Albert
+  Cohen}, \bibinfo{person}{Wolfgang Karl}, \bibinfo{person}{Andrea Marongiu},
+  {and} \bibinfo{person}{Luca Benini}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Towards Transactional Memory Support for GCC}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Shavit and Touitou}{Shavit and
+  Touitou}{1995}]%
+        {shavit1995software}
+\bibfield{author}{\bibinfo{person}{Nir Shavit} {and} \bibinfo{person}{Dan
+  Touitou}.} \bibinfo{year}{1995}\natexlab{}.
+\newblock \showarticletitle{Software transactional memory}.
+\newblock  (\bibinfo{year}{1995}), \bibinfo{pages}{204--213}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Shih, Lee, Kim, and Peinado}{Shih
+  et~al\mbox{.}}{2017}]%
+        {Shih2017T}
+\bibfield{author}{\bibinfo{person}{Ming~Wei Shih}, \bibinfo{person}{Sangho
+  Lee}, \bibinfo{person}{Taesoo Kim}, {and} \bibinfo{person}{Marcus Peinado}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{T-SGX: Eradicating Controlled-Channel Attacks
+  Against Enclave Programs}. In \bibinfo{booktitle}{{\em Network and
+  Distributed System Security Symposium}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Shinde, Zheng, Narayanan, and Saxena}{Shinde
+  et~al\mbox{.}}{2015}]%
+        {Shinde2015Preventing}
+\bibfield{author}{\bibinfo{person}{Shweta Shinde}, \bibinfo{person}{Leong~Chua
+  Zheng}, \bibinfo{person}{Viswesh Narayanan}, {and} \bibinfo{person}{Prateek
+  Saxena}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Preventing Your Faults From Telling Your Secrets:
+  Defenses Against Pigeonhole Attacks}.
+\newblock \bibinfo{journal}{{\em Computer Science\/}} (\bibinfo{year}{2015}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Szekeres, Payer, Wei, and Song}{Szekeres
+  et~al\mbox{.}}{2013}]%
+        {Szekeres2013Eternal}
+\bibfield{author}{\bibinfo{person}{Laszlo Szekeres}, \bibinfo{person}{Mathias
+  Payer}, \bibinfo{person}{Tao Wei}, {and} \bibinfo{person}{Dawn Song}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Eternal War in Memory}. In \bibinfo{booktitle}{{\em
+  Security and Privacy}}. \bibinfo{pages}{48--62}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wang, Gaudet, Wu, Amaral, Ohmacht, Barton,
+  Silvera, and Michael}{Wang et~al\mbox{.}}{2012}]%
+        {Wang2012Evaluation}
+\bibfield{author}{\bibinfo{person}{Amy Wang}, \bibinfo{person}{Matthew Gaudet},
+  \bibinfo{person}{Peng Wu}, \bibinfo{person}{Jos¨¦~Nelson Amaral},
+  \bibinfo{person}{Martin Ohmacht}, \bibinfo{person}{Christopher Barton},
+  \bibinfo{person}{Raul Silvera}, {and} \bibinfo{person}{Maged Michael}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Evaluation of Blue Gene/Q hardware support for
+  transactional memories}.
+\newblock  (\bibinfo{year}{2012}), \bibinfo{pages}{127--136}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Xu, Cui, and Peinado}{Xu
+  et~al\mbox{.}}{2015}]%
+        {Xu2015Controlled}
+\bibfield{author}{\bibinfo{person}{Yuanzhong Xu}, \bibinfo{person}{Weidong
+  Cui}, {and} \bibinfo{person}{Marcus Peinado}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Controlled-Channel Attacks: Deterministic Side
+  Channels for Untrusted Operating Systems}. In \bibinfo{booktitle}{{\em
+  Security and Privacy}}. \bibinfo{pages}{640--656}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zhao, Lin, Pan, Xue, Zheng, and Ma}{Zhao
+  et~al\mbox{.}}{2016}]%
+        {Zhao2016RegRSA}
+\bibfield{author}{\bibinfo{person}{Yuan Zhao}, \bibinfo{person}{Jingqiang Lin},
+  \bibinfo{person}{Wuqiong Pan}, \bibinfo{person}{Cong Xue},
+  \bibinfo{person}{Fangyu Zheng}, {and} \bibinfo{person}{Ziqiang Ma}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em RegRSA: Using Registers as Buffers to Resist
+  Memory Disclosure Attacks}}.
+\newblock \bibinfo{publisher}{Springer International Publishing}. 293--307
+  pages.
+\newblock
+
+
 \end{thebibliography}

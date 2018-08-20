@@ -1,6 +1,6 @@
 
 \section{CONCLUSION}
-The cryptographic systems are now widely used and linked to the user's core interests.However,existing memory protections are difficult to support key security in user-mode cryptographic systems.This paper introduces Peapods, which is a automated, efficient compiler enhancement tool that provides security enhancements for application layer cryptographic systems that can defend against software memory attacks and cold-boot attack.
+The cryptographic systems are now widely used and linked to the user's core interests.However,existing memory protections are difficult to support key security in user-mode cryptographic systems.This paper introduces Peapods, which is a automated, efficient, and OS-Independent compiler enhancement tool that provides security enhancements for application layer cryptographic systems that can defend against software memory attacks and cold-boot attack.It ensures that the key is stored in ciphertext in memory when it is not being calculated and in the course of calculation, once an attacker reads the key, the key will be automatically cleared.Although peapods is mainly dedicated to the protection of keys in cryptographic systems, peapods can also protect user sensitive information when necessary.
 
 \begin{acks}
 
@@ -11,4 +11,4 @@ The authors would like to thank XXX
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{sample-bibliography}
+\bibliography{peapodstex}

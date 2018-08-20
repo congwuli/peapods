@@ -5,10 +5,6 @@ Our system is a C/C++ compiler built on the Clang/LLVM compiler framework. Any a
 
 The LLVM module pass provides the sensitive variable identification logic, sensitive information encryption and decryption logic we need.
 
-\subsection{Utility functions}
-
-
-We encapsulate the XBEGIN and XEND instructions in user mode into utility functions START and END.They are used to start transactions and end transactions respectively.In addition,We also encapsulate an Utility functions TEM to split transactions.
 
 %≤Â»ÎÕº
 \subsection{Master key protection}
@@ -50,14 +46,12 @@ struct args{
 }*args_list,args_list_next;
 \end{lstlisting}
 
-When users want to assign values to sensitive variables, they need to call START(args\_list) before assigning sensitive variables and END(args\_list) after assigning values.In IR PASS, we add logic to automatically encrypt and decrypt sensitive variables in utility functions such as START and END. In this way, the entire assignment process is performed under transaction protection. After the transaction is started, the sensitive variables are decrypted, and then encrypt sensitive variables before ending the transaction. Therefore, there is always only a ciphertext sensitive variable in memory.
-
-It is worth noting that reading and writing files within a transaction will cause the transaction to abort. Therefore, Peapods cannot provide security protection during the assignment phase if the user reads a file to assign sensitive variables.In fact, in this case, the user can still call START(args list) after reading the file, call END(args list) after assignment, and clear the plaintext intermediate variable to make the sensitive variable exist in ciphertext after the assignment.However, in the process of reading a file, sensitive information is exposed in memory in the form of clear text. It is assumed that there is no memory disclosure attack at this time.At the same time, there is a backup of sensitive information in the hard disk. An attacker can also read the hard disk to obtain sensitive information. The user needs to delete the file containing sensitive information after reading the file.
 
 \subsection{Sensitive information protection}
-We need to consider time interruptions during the calculation. The calculation of sensitive information (such as private keys) is usually relatively time-consuming. Therefore, the execution of a transaction that would otherwise be successful may be terminated by a time interruption.In addition, other interrupts can also cause the transaction to terminate.The solution to other kernel-mode memoryless encryption schemes is to disable interrupts,such as TRESOR, PRIME, Copker and Mimosa. We propose transaction split, a method for breaking time-consuming large transactions into multiple small transactions.
 
-The design of the transaction split is mainly to achieve the following goals:
+We need to consider time interruptions during the calculation. The calculation of sensitive information (such as private keys) is usually relatively time-consuming. Therefore, the execution of a transaction that would otherwise be successful may be terminated by a time interruption.In addition, other interrupts can also cause the transaction to terminate.The solution to other kernel-mode memoryless encryption schemes is to disable interrupts,such as TRESOR, PRIME, Copker and Mimosa. We propose Sensitive Calculation Split, a method for breaking time-consuming large Calculation into multiple small transactions.
+
+The design of the Sensitive Calculation Split is mainly to achieve the following goals:
 1.Even if the entire time-consuming calculation is not completed, we can still save some time-consuming intermediate calculation results. When the transaction occurs abort, we can use these already calculated intermediate calculation results to start the next calculation.
 2.Compared to transactions that were not split prior to the entire calculation, only a small number of CPU clock cycles were consumed in each transaction and only a small amount of memory space was occupied. Therefore, these small transactions are easier to submit successfully.
 
@@ -65,7 +59,14 @@ Since the introduction of transaction splitting, the entire calculation is no lo
 
 After we split a PolarSSL RSA decryption calculation into 128 times, the program performs well.
 
-We provide users with three utility functions.We track all function call instructions in IR PASS, recognize the call to START, END, and TEM. Then we insert the corresponding intermediate representation code of encryption and decryption before the END function call instruction, after the START function call instruction, and both before and after the TEM function call instruction respectively.
+We encapsulate the xbegin and xend instructions in user mode into utility functions T\_START and T\_END.They are used to start transactions and end transactions respectively.In addition,We also encapsulate an Utility functions T\_SPLIT to split sensitive calculation.We track all function call instructions in IR PASS, recognize the call to T\_START, T\_END, and T\_SPLIT. Then we insert the corresponding intermediate representation code of encryption and decryption before the T\_END function call instruction, after the T\_START function call instruction, and both before and after the T\_SPLIT function call instruction respectively.
+
+When users want to assign values to sensitive variables, they need to call T\_START(args\_list) before assigning sensitive variables and T\_END(args\_list) after assigning values.In IR PASS, we add logic to automatically encrypt and decrypt sensitive variables in utility functions such as T\_START and T\_END. In this way, the entire assignment process is performed under transaction protection. After the transaction is started, the sensitive variables are decrypted, and then encrypt sensitive variables before ending the transaction. Therefore, there is always only a ciphertext sensitive variable in memory.
+
+{\color{blue}Therefore, for the sensitive variables marked by the user with the keywords we provide, they are stored in the ciphertext in the memory after variable initialization, decrypted into plaintext before the sensitive calculation and assignment, and encrypted into ciphertext after the sensitive calculation and assignment are completed.}
+
+It is worth noting that reading and writing files within a transaction will cause the transaction to abort. Therefore, Peapods cannot provide security protection during the assignment phase if the user reads a file to assign sensitive variables.In fact, in this case, the user can still call T\_START(args list) after reading the file, call T\_END(args list) after assignment, and clear the plaintext intermediate variable to make the sensitive variable exist in ciphertext after the assignment.However, in the process of reading a file, sensitive information is exposed in memory in the form of clear text. It is assumed that there is no memory disclosure attack at this time.At the same time, there is a backup of sensitive information in the hard disk. An attacker can also read the hard disk to obtain sensitive information. The user needs to delete the file containing sensitive information after reading the file.
+
 
 \begin{table}[htbp]
  \caption{\label{tab:libfunc} Utility functions list}
@@ -74,11 +75,11 @@ We provide users with three utility functions.We track all function call instruc
   \hline
   \textbf{Function Name} & \textbf{Function} & \textbf{Usage Method} & \textbf{Implementation logic} \\
   \hline
-  T\_START(args\_list) & Start a transaction & Used before sensitive operations begin & (1)XBEGIN£ª(2)get the master key from the XMM7 register£ª(3)generate AES context using the master key£ª(4)AES decryption of CBC mode for identified sensitive data variables \\
+  T\_START(args\_list) & Start a peapod & Used before sensitive operations begin & (1)XBEGIN£ª(2)get the master key from the XMM7 register£ª(3)generate AES context using the master key£ª(4)AES decryption of CBC mode for identified sensitive data variables \\
   \hline
-  T\_END(args\_list) & End a transaction & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables£ª(2)Erase intermediate results£ª(3)XEND \\
+  T\_END(args\_list) & End a peapod & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables£ª(2)Erase intermediate results£ª(3)XEND \\
   \hline
-  T\_SPLIT(args\_list) & Split a transaction & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables£ª(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.£ª(3)Erase intermediate results£ª(4)XEND£ª(5)XBEGIN£ª(6)get the master key from the XMM7 register£ª(7)generate AES context using the master key£ª(8)AES decryption of CBC mode for identified sensitive data variables \\
+  T\_SPLIT(args\_list) & Split a peapod & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables£ª(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.£ª(3)Erase intermediate results£ª(4)XEND£ª(5)XBEGIN£ª(6)get the master key from the XMM7 register£ª(7)generate AES context using the master key£ª(8)AES decryption of CBC mode for identified sensitive data variables \\
   \hline
  \end{tabular}
 \end{table}
@@ -97,9 +98,9 @@ The above implementation still has some problems:
 
 \subsection{usage method}
 %protected process
-Users only need to add a small amount of code when using peapods to automatically implement sensitive information protection.When a user needs to add security enhancements to a certain cryptographic software system, (1) the \_\_attribute\_\_(annotation "Private\_Key") keyword needs to be added before the definition of the sensitive variable of the type whose address has been determined during the compilation, (2) assign pointer-type sensitive variables to the args\_list structure, then pass parameters to the START(args\_list) and END(args\_list) functions, (3) The START(args\_list) function needs to be called before the variable assignment, and the END(args\_list) function is called after the assignment.
+Users only need to add a small amount of code when using peapods to automatically implement sensitive information protection.When a user needs to add security enhancements to a certain cryptographic software system, (1) the \_\_attribute\_\_(annotation "Private\_Key") keyword needs to be added before the definition of the sensitive variable of the type whose address has been determined during the compilation, (2) assign pointer-type sensitive variables to the args\_list structure, then pass parameters to the T\_START(args\_list) and T\_END(args\_list) functions, (3) The T\_START(args\_list) function needs to be called before the variable assignment, and the T\_END(args\_list) function is called after the assignment.
 
-In addition, the user needs to call the START(args\_list) function before calculating the sensitive information and call the END(args\_list) function after the sensitive information is calculated.When the sensitive information calculation is too time-consuming, the user needs to call the TEM(args list) function at the split location to split the transaction.
+In addition, the user needs to call the T\_START(args\_list) function before calculating the sensitive information and call the T\_END(args\_list) function after the sensitive calculation is completed.When the sensitive calculation is too time-consuming, the user needs to call the T\_SPLIT(args\_list) function at the split location to split the sensitive calculation.
 
 After users complete the above work, Peapods will automatically use HTM to protect sensitive information. Therefore, we can provide security enhancements for various types of cryptographic software systems without refactoring the entire cryptographic software in the presence of security vulnerabilities.The amount of code that the user needs to add is only a few hundred lines to several thousand lines (depending on the number and type of sensitive variables, the number of splits, etc.), the proportion compared to the total code volume of the cryptographic software system (usually several hundred thousand lines) is small.
 
@@ -120,23 +121,23 @@ It is worth noting that all user programs in the system need to be compiled with
 \begin{lstlisting}
 __attribute__((annotation"Private_Key")) unsighed char secret[16];
 
-START(args_list);
+T\_START(args_list);
     secret={\
         0x45,0x46,0x88,0x32,\
         0x2a,0x6d,0x8c,0x31,\
         0x58,0xf2,0x30,0x02,\
         0x4f,0x32,0x7d,0x22\
     };
-END(args_list);
+T\_END(args_list);
 
-START(args_list);
+T\_START(args_list);
     secret_protect_compute_1();
-TEM(args_list);
+T\_SPLIT(args_list);
     secret_protect_compute_2();
 
     ...
 
-TEM(args_list);
+T\_SPLIT(args_list);
     secret_protect_compute_n();
-END(args_list);
+T\_END(args_list);
 \end{lstlisting}
