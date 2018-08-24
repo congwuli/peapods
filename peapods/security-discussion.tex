@@ -8,6 +8,6 @@ When the computer undergoes a core dump, as the Peapods transaction is interrupt
 
 Attackers may also attack sensitive information through the side channel.Fortunately, Peapods is immune to cache-based time-side channel attacks because AES-NI itself is not subject to any known side-channel attacks and the sensitive information calculation is fully implemented in the cache.Peepods can't resist timing side channel attacks, but programmers can defend against the attacks by refactoring the code and adding blinding algorithm.
 
-meltdown
+{\color{blue}The meltdown attack exploits the vulnerability that the instruction execution security check is not executed in time during the out-of-order execution of the instruction and the cache-based side channel attack to obtain sensitive information.We completed an experiment to verify whether intel tsx can defend against the meltdown attack. The experimental results show that the attacker can still obtain sensitive information from tsx protection, that is, peapods cannot resist the meltdown attack(The cache-side channel attack method we use is Flush+Reload).}
 
-Peapods have their own limitations.One limitation is that Peapods cannot protect libraries without source code.This problem could be solved when library developers apply Peapods to their closed-source libraries. 
+Peapods have their own limitations.One limitation is that Peapods cannot protect libraries without source code.This problem could be solved when library developers apply Peapods to their closed-source libraries.

@@ -52,7 +52,7 @@ are not saved.
 
 \end{enumerate}
 
-The first goal can resist memory disclosure attacks (in kernel-mode), the second goal is to provide support for the application layer cryptographic software systems in user mode, the third goal is to enable Peapods to implement security enhancements for a variety of cryptographic software systems automatically.
+The first goal can resist memory disclosure attacks, the second goal is to provide support for the application layer cryptographic software systems in user mode, the third goal is to enable Peapods to implement security enhancements for a variety of cryptographic software systems automatically.
 
 In summary, Peapods can resist various memory disclosure attacks and provide security enhancements for various application layer cryptographic software systems, automatically.}
 %\section{CHALLENGES AND SOLUTIONS}
@@ -95,7 +95,7 @@ Compilation phase:1.Add initialization logic.2.For sensitive variables whose com
 
 %程序执行阶段
 %分为初始化阶段，敏感变量定义和赋值阶段，保护计算阶段
-{\color{blue}Program execution phase:We can divide the program execution phase into initialization phase and protection calculation phase.}
+{\color{blue}Program execution phase:We can divide the program execution phase into initialization phase and protected computing phase.}
 
 We use an AES master key to protect user sensitive data. The AES master key is generated at program startup and is then stored in the LLVM compiler reserved register.Sensitive variables are AES encrypted after user-defined initialization or after assignment. When receiving a request for calculating sensitive information, Sensitive information is dynamically generated, used, and destroyed in transaction execution.When there is no computing task, sensitive information is always stored in ciphertext in memory.
 
@@ -119,7 +119,7 @@ The first step is to generate the master key, the second and third steps are to 
 
 
 
-Protection calculation phase:
+Protected computing phase:
 When Peapods receives a sensitive information calculation request, sensitive information is calculated using the corresponding sensitive information, and then the result is provided to the user.This stage contains the following steps:
 1.TSX begins to track memory access in the L1 data cache (maintaining read/write sets).
 2.Ciphertext sensitive information is loaded into cache from memory.

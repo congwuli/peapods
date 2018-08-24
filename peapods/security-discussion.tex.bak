@@ -1,12 +1,6 @@
 
 \section{SECURITY DISCUSSION}
-{\color{blue} All the three security goals are achieved with Intel TSX and LLVM as follows. Any attack that attempts to access the keys and sensitive intermediate states during
-the protected computing phase automatically triggers the hardware abort handler,
-clearing all sensitive information. If it commits successfully, the transactional execution
-is guaranteed to be performed within L1D caches and always ends with clearing
-all sensitive data.}
-
-First, peapods have their own limitations.One limitation of Peapods is that it requires all user-mode executives must be recompiled by the modified LLVM we provide.This is conducive to the formation of a safe execution environment.It is difficult for an attacker to execute his own attack code, because it requires breaking the control flow integrity first.There are many effective control flow integrity protection implementation proposed, such as Cryptographic CFI, Forward Edge CFI, etc.Another limitation is that Peapods cannot protect libraries without source code.This problem could be solved when library developers apply Peapods to their closed-source libraries.
+{\color{blue} All the three security goals are achieved with Intel TSX and LLVM as follows. During the protected computing phase, any access to a key or other sensitive information triggers the transaction abort, which clears all sensitive information. If it commits successfully, the transactional execution is guaranteed to be performed within L1D caches and always ends with clearing all sensitive data.Peapods is an OS-independent and cryptographic algorithm-independent tool based on LLVM that does not depend on any kernel features.The user needs to make some modifications to the source code during the programming phase. In order for peapods to recognize and protect sensitive variables, users tag sensitive variables with new keywords we provide and call T\_START(args\_list) before assign sensitive variables and call T\_END(args\_list) after assign sensitive variables during variable initialization.In order to protect sensitive variables during protected computing phase, users also need to call T\_START(args\_list) before sensitive calculations and T\_END(args\_list) after sensitive calculations.When the user completes the modification of the source code, peapods can automatically protect sensitive variables.}
 
 
 %²àÐÅµÀ dumpÄÚ´æ
@@ -14,3 +8,6 @@ When the computer undergoes a core dump, as the Peapods transaction is interrupt
 
 Attackers may also attack sensitive information through the side channel.Fortunately, Peapods is immune to cache-based time-side channel attacks because AES-NI itself is not subject to any known side-channel attacks and the sensitive information calculation is fully implemented in the cache.Peepods can't resist timing side channel attacks, but programmers can defend against the attacks by refactoring the code and adding blinding algorithm.
 
+{\color{blue}The meltdown attack exploits the vulnerability that the instruction execution security check is not executed in time during the out-of-order execution of the instruction and the cache-based side channel attack to obtain sensitive information.We completed an experiment to verify whether intel tsx can defend against the meltdown attack. The experimental results show that the attacker can still obtain sensitive information from tsx protection, that is, peapods cannot resist the meltdown attack.}
+
+Peapods have their own limitations.One limitation is that Peapods cannot protect libraries without source code.This problem could be solved when library developers apply Peapods to their closed-source libraries.

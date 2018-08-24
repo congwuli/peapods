@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  20 AUG 2018 10:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.9)  23 AUG 2018 18:22
 entering extended mode
 **C:/Users/lcw/peapods/peapods/peapods.tex
 (C:/Users/lcw/peapods/peapods/peapods.tex
@@ -906,7 +906,7 @@ Missing character: There is no » in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no » in font cmr10!
 
-Overfull \hbox (43.33316pt too wide) in paragraph at lines 74--85
+Overfull \hbox (26.30537pt too wide) in paragraph at lines 74--85
  [][] 
  []
 
@@ -922,60 +922,58 @@ Underfull \vbox (badness 4859) has occurred while \output is active []
 
  [11.11])
 (C:\Users\lcw\peapods\peapods\security-discussion.tex)
-(C:\Users\lcw\peapods\peapods\evaluation.tex [12.12]
+(C:\Users\lcw\peapods\peapods\evaluation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12.12]
 <figure/rsa_local_peapods.pdf, id=206, 378.80421pt x 167.70955pt>
 File: figure/rsa_local_peapods.pdf Graphic file (type pdf)
 
 <use figure/rsa_local_peapods.pdf>
-Package pdftex.def Info: figure/rsa_local_peapods.pdf used on input line 10.
+Package pdftex.def Info: figure/rsa_local_peapods.pdf used on input line 11.
 (pdftex.def)             Requested size: 356.23782pt x 157.72632pt.
- [13.13 <C:/Users/lcw/peapods/peapods/figure/rsa_local_peapods.pdf>]
+ [13.13 <C:/Users/lcw/peapods/peapods/figure/rsa_local_peapods.pdf>] [14.14]
 Missing character: There is no ¡ in font cmr10!
 Missing character: There is no ª in font cmr10!
- <figure/stream.pdf, id=222, 378.80421pt x 184.4792pt>
-File: figure/stream.pdf Graphic file (type pdf)
 
-<use figure/stream.pdf>
-Package pdftex.def Info: figure/stream.pdf used on input line 72.
+<figure/stream.pdf, id=228, 378.80421pt x 184.4792pt>
+File: figure/stream.pdf Graphic file (type pdf)
+ <use figure/stream.pdf>
+Package pdftex.def Info: figure/stream.pdf used on input line 75.
 (pdftex.def)             Requested size: 356.23782pt x 173.49773pt.
-Missing character: There is no Ó in font cmssbx10!
-Missing character: There is no ë in font cmssbx10!
-Missing character: There is no µ in font cmssbx10!
-Missing character: There is no Ä in font cmssbx10!
-Missing character: There is no ± in font cmssbx10!
-Missing character: There is no È in font cmssbx10!
-Missing character: There is no ½ in font cmssbx10!
-Missing character: There is no Ï in font cmssbx10!
-) (C:\Users\lcw\peapods\peapods\related-work.tex
-[14.14] [15.15 <C:/Users/lcw/peapods/peapods/figure/stream.pdf>])
-(C:\Users\lcw\peapods\peapods\conclusion.tex
+)
+(C:\Users\lcw\peapods\peapods\related-work.tex [15.15 <C:/Users/lcw/peapods/pea
+pods/figure/stream.pdf>]) (C:\Users\lcw\peapods\peapods\conclusion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16.16]
 (C:\Users\lcw\peapods\peapods\comment.cut))
-(C:\Users\lcw\peapods\peapods\peapods.bbl [16.16]
+(C:\Users\lcw\peapods\peapods\peapods.bbl
 Missing character: There is no ¨ in font cmr8!
 Missing character: There is no ª in font cmr8!
 Missing character: There is no ¨ in font cmr8!
 Missing character: There is no ¹ in font cmr8!
+ [17.17]
 Missing character: There is no ¨ in font cmr8!
 Missing character: There is no ¢ in font cmr8!
+Missing character: There is no ¨ in font cmr8!
+Missing character: There is no ¦ in font cmr8!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17.17]
-Missing character: There is no ¨ in font cmr8!
-Missing character: There is no ¦ in font cmr8!
-)
-[18.18]
+ [18.18])
+[19.19]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (C:\Users\lcw\peapods\peapods\peapods.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `peapods.out' has not changed.
-(rerunfilecheck)             Checksum: 6B393BA28C07DBCF61F1D461803DD71B;3944.
+(rerunfilecheck)             Checksum: EBDC07FE3228C07A9C0C3E3A71A85ED5;3990.
  ) 
 Here is how much of TeX's memory you used:
- 16147 strings out of 495354
- 229901 string characters out of 3183131
+ 16148 strings out of 495354
+ 229908 string characters out of 3183131
  418857 words of memory out of 3000000
  18521 multiletter control sequences out of 15000+200000
  20729 words of font info for 154 fonts, out of 3000000 for 9000
@@ -997,9 +995,9 @@ ts/type1/public/amsfonts/cm/cmti9.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/
 public/cm-super/sfrm0800.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm
 -super/sfrm0900.pfb><D:/software/tex/CTEX/MiKTeX/fonts/type1/public/cm-super/sf
 rm1000.pfb>
-Output written on peapods.pdf (18 pages, 362182 bytes).
+Output written on peapods.pdf (19 pages, 364581 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 122 named destinations out of 1000 (max. 500000)
  24803 words of extra memory for PDF output out of 24883 (max. 10000000)
 

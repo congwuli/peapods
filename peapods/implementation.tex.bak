@@ -55,7 +55,7 @@ The design of the Sensitive Calculation Split is mainly to achieve the following
 1.Even if the entire time-consuming calculation is not completed, we can still save some time-consuming intermediate calculation results. When the transaction occurs abort, we can use these already calculated intermediate calculation results to start the next calculation.
 2.Compared to transactions that were not split prior to the entire calculation, only a small number of CPU clock cycles were consumed in each transaction and only a small amount of memory space was occupied. Therefore, these small transactions are easier to submit successfully.
 
-Since the introduction of transaction splitting, the entire calculation is no longer an atomic operation, we need to encrypt the calculated intermediate calculation results using the AES master key before the transaction ends, and then perform AES decryption after the start of the next transaction to ensure security outside the transaction.These security logic are automatically implemented when the TEM function is called
+Since the introduction of Sensitive Calculation Split, the entire calculation is no longer an atomic operation, we need to encrypt the calculated intermediate calculation results using the AES master key before the transaction ends, and then perform AES decryption after the start of the next transaction to ensure security outside the transaction.These security logic are automatically implemented when the TEM function is called
 
 After we split a PolarSSL RSA decryption calculation into 128 times, the program performs well.
 
@@ -79,7 +79,7 @@ It is worth noting that reading and writing files within a transaction will caus
   \hline
   T\_END(args\_list) & End a peapod & Used after sensitive operations end & (1)AES encryption of CBC mode for identified sensitive data variables£»(2)Erase intermediate results£»(3)XEND \\
   \hline
-  T\_SPLIT(args\_list) & Split a peapod & Used in locations where transactions need to be split within the transaction & (1)AES encryption of CBC mode for identified sensitive data variables£»(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.£»(3)Erase intermediate results£»(4)XEND£»(5)XBEGIN£»(6)get the master key from the XMM7 register£»(7)generate AES context using the master key£»(8)AES decryption of CBC mode for identified sensitive data variables \\
+  T\_SPLIT(args\_list) & Split a peapod & Used in locations where sensitive calculation need to be split & (1)AES encryption of CBC mode for identified sensitive data variables£»(2)Generate intermediate variable IV, then randomly initialize and perform AES encryption of CBC mode for the intermediate variables passed in by the user.£»(3)Erase intermediate results£»(4)XEND£»(5)XBEGIN£»(6)get the master key from the XMM7 register£»(7)generate AES context using the master key£»(8)AES decryption of CBC mode for identified sensitive data variables \\
   \hline
  \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ The above implementation still has some problems:
 %protected process
 Users only need to add a small amount of code when using peapods to automatically implement sensitive information protection.When a user needs to add security enhancements to a certain cryptographic software system, (1) the \_\_attribute\_\_(annotation "Private\_Key") keyword needs to be added before the definition of the sensitive variable of the type whose address has been determined during the compilation, (2) assign pointer-type sensitive variables to the args\_list structure, then pass parameters to the T\_START(args\_list) and T\_END(args\_list) functions, (3) The T\_START(args\_list) function needs to be called before the variable assignment, and the T\_END(args\_list) function is called after the assignment.
 
-In addition, the user needs to call the T\_START(args\_list) function before calculating the sensitive information and call the T\_END(args\_list) function after the sensitive information is calculated.When the sensitive information calculation is too time-consuming, the user needs to call the T\_SPLIT(args\_list) function at the split location to split the transaction.
+In addition, the user needs to call the T\_START(args\_list) function before calculating the sensitive information and call the T\_END(args\_list) function after the sensitive calculation is completed.When the sensitive calculation is too time-consuming, the user needs to call the T\_SPLIT(args\_list) function at the split location to split the sensitive calculation.
 
 After users complete the above work, Peapods will automatically use HTM to protect sensitive information. Therefore, we can provide security enhancements for various types of cryptographic software systems without refactoring the entire cryptographic software in the presence of security vulnerabilities.The amount of code that the user needs to add is only a few hundred lines to several thousand lines (depending on the number and type of sensitive variables, the number of splits, etc.), the proportion compared to the total code volume of the cryptographic software system (usually several hundred thousand lines) is small.
 
