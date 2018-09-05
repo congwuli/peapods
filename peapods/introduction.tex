@@ -3,7 +3,7 @@
 
 Cryptographic algorithms are widely used in cryptographic systems and play a significant role.When we use cryptographic algorithms to implement cryptographic systems, we usually use existing Open Source cryptographic libraries to complete the required calculations and combine them with application functions.
 The cryptographic software system is linked to the user's core interests. When users use online transactions, e-mail, and remote login services, they rely on the protection of cryptographic software systems. Once the security of cryptographic systems is not guaranteed, it will cause extreme problems for users.On the other hand, the speed of computing directly affects the user's experience with the cryptographic system. Therefore, it is imperative to provide secure, high-speed and reliable cryptographic services.
-In recent years, many memory protection schemes have been proposed. Copker Mimosa RegRSA . Although these schemes can protect memory information in some scenarios, there are some shortcomings:{\color{blue}(1)Difficult to implement under the Windows OS, because users can not get enough operating system permissions, (2) The amount of kernel code increases, and the entire system is vulnerable to attack. }Therefore, existing application layer cryptographic software system still face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.We need a more principled approach to secure the key in the application layer cryptographic software system.
+In recent years, many memory protection schemes have been proposed\cite{Guan2014Copker}\cite{Guan2015Protecting}\cite{Zhao2016RegRSA}\cite{Garmany2013PRIME}\cite{Freiling2011TRESOR}.Although these schemes can protect memory information in some scenarios, there are some shortcomings:(1)Difficult to implement under the Windows OS, because users can not get enough operating system permissions, (2) The amount of kernel code increases, and the entire system is vulnerable to attack. Therefore, existing application layer cryptographic software system still face various memory disclosure attacks and the security of sensitive data cannot be guaranteed, especially key security.We need a more principled approach to secure the key in the application layer cryptographic software system.
 
 %介绍peapods的必要性
 
@@ -24,7 +24,7 @@ In recent years, many memory protection schemes have been proposed. Copker Mimos
 
 \textbf{Peapods}
 %介绍peapods的贡献
-{\color{blue}Peapods is an automated compiler enhancement tool based on LLVM that provides security enhancements for application layer cryptographic systems that can defend against software memory attacks and cold-boot attack.Peapods protects the key calculation process through Intel TSX.}
+Peapods is an automated compiler enhancement tool based on LLVM that provides security enhancements for application layer cryptographic systems that can defend against software memory attacks and cold-boot attack.Peapods protects the key calculation process through Intel TSX.
 
 In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information. Although peapods is mainly dedicated to the protection of keys in cryptographic systems, peapods can also protect user sensitive information when necessary.
 
@@ -33,7 +33,7 @@ In our scenario, a Peapod represents a protected key-related calculation (especi
 \textbf{Implementation}
 %实现
 
-We implemented Peapods in LLVM for x86 and recompiled PolarSSL and all of its dependencies.We use Peapods to protect Polarssl RSA decryption calculations and users only need to make a few code changes(less than 1000 lines).Experiment shows that compared to PolarSSL protected by Peapods and non-protected PolarSSL, the overhead is only 10\% within an acceptable range.
+We implemented Peapods in LLVM for x86 and recompiled PolarSSL and all of its dependencies.We use Peapods to protect Polarssl RSA decryption calculations and only need to make a few code changes(less than 1000 lines).Experiment shows that compared to PolarSSL protected by Peapods and non-protected PolarSSL, the overhead is only 10\% within an acceptable range.
 
 \textbf{Our contributions}
 

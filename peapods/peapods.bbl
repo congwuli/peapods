@@ -51,6 +51,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Becher, Dornseif, and Klein}{Becher
+  et~al\mbox{.}}{2005}]%
+        {DMA2}
+\bibfield{author}{\bibinfo{person}{M. Becher}, \bibinfo{person}{M. Dornseif},
+  {and} \bibinfo{person}{C. Klein}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{FireWire: All your memory are belong to us}. In
+  \bibinfo{booktitle}{{\em 6th Annual CanSecWest Conference}}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Birgisson, Dhawan, Ganapathy, and
   Iftode}{Birgisson et~al\mbox{.}}{2008}]%
         {Birgisson2008Enforcing}
@@ -73,6 +83,29 @@
 \newblock \showarticletitle{Software transactional memory for large scale
   clusters}. In \bibinfo{booktitle}{{\em ACM Sigplan Symposium on Principles
   and Practice of Parallel Programming}}. \bibinfo{pages}{247--258}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bock}{Bock}{2009}]%
+        {DMA3}
+\bibfield{author}{\bibinfo{person}{B. Bock}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{title}{Firewire-based physical security attacks on {Windows
+  7}, {EFS} and {BitLocker}}.
+\newblock   (\bibinfo{year}{2009}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Brasser, Muller, Dmitrienko, Kostiainen,
+  Capkun, and Sadeghi}{Brasser et~al\mbox{.}}{2017}]%
+        {brasser2017software}
+\bibfield{author}{\bibinfo{person}{Ferdinand Brasser}, \bibinfo{person}{Urs~A
+  Muller}, \bibinfo{person}{Alexandra Dmitrienko}, \bibinfo{person}{Kari
+  Kostiainen}, \bibinfo{person}{Srdjan Capkun}, {and}
+  \bibinfo{person}{Ahmadreza Sadeghi}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Software Grand Exposure: SGX Cache Attacks Are
+  Practical}.
+\newblock \bibinfo{journal}{{\em arXiv: Cryptography and Security\/}}
+  (\bibinfo{year}{2017}).
 \newblock
 
 
@@ -110,6 +143,17 @@
 \newblock \showarticletitle{Shreds: Fine-Grained Execution Units with Private
   Memory}. In \bibinfo{booktitle}{{\em Security and Privacy}}.
   \bibinfo{pages}{56--71}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chow, Pfaff, Garfinkel, Christopher, and
+  Rosenblum}{Chow et~al\mbox{.}}{2004}]%
+        {understand-data-life}
+\bibfield{author}{\bibinfo{person}{J. Chow}, \bibinfo{person}{B. Pfaff},
+  \bibinfo{person}{T. Garfinkel}, \bibinfo{person}{K. Christopher}, {and}
+  \bibinfo{person}{M. Rosenblum}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Understanding data lifetime via whole system
+  simulation}. In \bibinfo{booktitle}{{\em 13th USENIX Security Symposium}}.
 \newblock
 
 
@@ -159,6 +203,18 @@
 \newblock \showarticletitle{RamCrypt: Kernel-based Address Space Encryption for
   User-mode Processes}. In \bibinfo{booktitle}{{\em ACM on Asia Conference on
   Computer and Communications Security}}. \bibinfo{pages}{919--924}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Engler, Chen, Hallem, Chou, and Chelf}{Engler
+  et~al\mbox{.}}{2001}]%
+        {bugs}
+\bibfield{author}{\bibinfo{person}{D. Engler}, \bibinfo{person}{D. Chen},
+  \bibinfo{person}{S. Hallem}, \bibinfo{person}{A. Chou}, {and}
+  \bibinfo{person}{B. Chelf}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Bugs as deviant behavior: A general approach to
+  inferring errors in systems code}. In \bibinfo{booktitle}{{\em 18th ACM
+  Symposium on Operating Systems Principles}}. \bibinfo{pages}{57--72}.
 \newblock
 
 
@@ -309,6 +365,29 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Kabay and Pabel}{Kabay and Pabel}{2009}]%
+        {coldvsfrozencache}
+\bibfield{author}{\bibinfo{person}{M. Kabay} {and} \bibinfo{person}{J. Pabel}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{title}{Cold Boot Attacks: The Frozen Cache Approach}.
+\newblock   (\bibinfo{year}{2009}).
+\newblock
+\newblock
+\shownote{\url{http://www.mekabay.com}.}
+
+
+\bibitem[\protect\citeauthoryear{Kolontsov}{Kolontsov}{1997}]%
+        {wu-ftp-vul}
+\bibfield{author}{\bibinfo{person}{V. Kolontsov}.}
+  \bibinfo{year}{1997}\natexlab{}.
+\newblock \bibinfo{title}{{WU-FTPD} core dump vulnerability (the old patch
+  doesn't work)}.
+\newblock   (\bibinfo{year}{1997}).
+\newblock
+\newblock
+\shownote{\url{http://insecure.org/sploits/ftp.coredump2.html}.}
+
+
 \bibitem[\protect\citeauthoryear{Kotselidis, Ansari, Jarvis, Luj¨¢n, Kirkham,
   and Watson}{Kotselidis et~al\mbox{.}}{2008}]%
         {Kotselidis2008DiSTM}
@@ -346,6 +425,20 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Lee, Jang, Jang, Kwak, Choi, Choi, Kim,
+  Peinado, and Kang}{Lee et~al\mbox{.}}{2017}]%
+        {lee2017hacking}
+\bibfield{author}{\bibinfo{person}{Jaehyuk Lee}, \bibinfo{person}{Jin~Soo
+  Jang}, \bibinfo{person}{Yeongjin Jang}, \bibinfo{person}{Nohyun Kwak},
+  \bibinfo{person}{Yeseul Choi}, \bibinfo{person}{Changho Choi},
+  \bibinfo{person}{Taesoo Kim}, \bibinfo{person}{Marcus Peinado}, {and}
+  \bibinfo{person}{Brent~Byunghoon Kang}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Hacking in Darkness: Return-oriented Programming
+  against Secure Enclaves.}
+\newblock  (\bibinfo{year}{2017}), \bibinfo{pages}{523--539}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Liu, Xia, Guan, Zang, and Chen}{Liu
   et~al\mbox{.}}{2014}]%
         {Liu2014Concurrent}
@@ -371,6 +464,29 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Maynor}{Maynor}{2005}]%
+        {usbdma}
+\bibfield{author}{\bibinfo{person}{David Maynor}.} \bibinfo{year}{May
+  2005}\natexlab{}.
+\newblock \bibinfo{title}{{DMA: Skeleton key of computing \&\& selected soap
+  box rants}}.
+\newblock   (\bibinfo{year}{May 2005}).
+\newblock
+\newblock
+\shownote{CanSecWest: \url{http://cansecwest.com/core05/DMA.ppt}.}
+
+
+\bibitem[\protect\citeauthoryear{{MITRE}}{{MITRE}}{2013}]%
+        {uncleared-data1}
+\bibfield{author}{\bibinfo{person}{{MITRE}}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{title}{{CWE-212}: Improper cross-boundary removal of
+  sensitive data}.
+\newblock   (\bibinfo{year}{2013}).
+\newblock
+\newblock
+\shownote{\url{https://cwe.mitre.org/data/definitions/212.html}.}
+
+
 \bibitem[\protect\citeauthoryear{Moore, Bobba, Moravan, and Hill}{Moore
   et~al\mbox{.}}{2006}]%
         {Moore2006LogTM}
@@ -381,6 +497,18 @@
   \bibinfo{booktitle}{{\em The Twelfth International Symposium on
   High-Performance Computer Architecture}}. \bibinfo{pages}{254--265}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{{National Vulnerability Database}}{{National
+  Vulnerability Database}}{2014}]%
+        {heartbleed}
+\bibfield{author}{\bibinfo{person}{{National Vulnerability Database}}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{title}{{CVE-2014-0160}}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
+\newblock
+\shownote{\url{http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160}.}
 
 
 \bibitem[\protect\citeauthoryear{Ni, Welc, Adl-Tabatabai, Bach, Berkowits,
@@ -396,6 +524,18 @@
   constructs for C/C++}.
 \newblock \bibinfo{journal}{{\em Acm Sigplan Notices\/}} \bibinfo{volume}{43},
   \bibinfo{number}{10} (\bibinfo{year}{2008}), \bibinfo{pages}{195--212}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rabaiotti and Hargreaves}{Rabaiotti and
+  Hargreaves}{2010}]%
+        {softwareexploit}
+\bibfield{author}{\bibinfo{person}{Joseph~R Rabaiotti} {and}
+  \bibinfo{person}{CJ Hargreaves}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Using a software exploit to image {RAM} on an
+  embedded system}.
+\newblock \bibinfo{journal}{{\em digital investigation\/}} \bibinfo{volume}{6},
+  \bibinfo{number}{3} (\bibinfo{year}{2010}), \bibinfo{pages}{95--103}.
 \newblock
 
 
@@ -480,6 +620,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{{sp00n}}{{sp00n}}{1997}]%
+        {dy-ftp-vul}
+\bibfield{author}{\bibinfo{person}{{sp00n}}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \bibinfo{title}{Security dynamics {FTP} server core problem}.
+\newblock   (\bibinfo{year}{1997}).
+\newblock
+\newblock
+\shownote{\url{http://insecure.org/sploits/solaris.secdynamics.core.html}.}
+
+
 \bibitem[\protect\citeauthoryear{Szekeres, Payer, Wei, and Song}{Szekeres
   et~al\mbox{.}}{2013}]%
         {Szekeres2013Eternal}
@@ -489,6 +639,17 @@
 \newblock \showarticletitle{Eternal War in Memory}. In \bibinfo{booktitle}{{\em
   Security and Privacy}}. \bibinfo{pages}{48--62}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{{Unknown author}}{{Unknown author}}{1996}]%
+        {solaris-ftp-vul}
+\bibfield{author}{\bibinfo{person}{{Unknown author}}.}
+  \bibinfo{year}{1996}\natexlab{}.
+\newblock \bibinfo{title}{Solaris (and others) ftpd core dump bug}.
+\newblock   (\bibinfo{year}{1996}).
+\newblock
+\newblock
+\shownote{\url{http://insecure.org/sploits/ftpd.pasv.html}.}
 
 
 \bibitem[\protect\citeauthoryear{Wang, Gaudet, Wu, Amaral, Ohmacht, Barton,

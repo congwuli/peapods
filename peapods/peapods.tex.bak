@@ -42,12 +42,12 @@
 %\setcopyright{cagovmixed}
 
 % DOI
-\acmDOI{0000001.0000001}
+%\acmDOI{0000001.0000001}
 
 % Paper history
-\received{February 2007}
-\received[revised]{March 2009}
-\received[accepted]{June 2009}
+%\received{February 2007}
+%\received[revised]{March 2009}
+%\received[accepted]{June 2009}
 
 \graphicspath{{figure/}}
 
@@ -146,5 +146,9 @@ Transactional Memory, Sensitive information protection
 \input{evaluation.tex}
 \input{related-work.tex}
 \input{conclusion.tex}
+
+% Bibliography
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{peapodstex}
 
 \end{document}

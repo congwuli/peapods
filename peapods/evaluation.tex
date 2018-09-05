@@ -1,7 +1,7 @@
 
 
 \section{EVALUATION}
-This section presents the experimental results by measuring the performance of Peapods. The experimental machine has an Intel Core i3-6100U processor and 8GB DRAM running a Linux operating system (kernel version 4.13.0).The processor is designed for low power (15W) usage, whose maximum frequency is 2.3GHz.We experimented with the PolarSSL cryptographic algorithm library and used Peapods to protect 2048-bit RSA private key calculations after splitting into 128 transactions and 256 transactions.The comparison objects in the experiment include: (1) the official default configuration of PolarSSL (version 1.3.6), (2) Peapods\_128, the Peapods split into 128 transactions,(3) Peapods\_256, the Peapods split into 256 transactions.
+We conducted an experiment to test the performance of Peapods.The experimental machine has an Intel Core i7-4770S quad-core processor running a Linux operating system (kernel version 3.13.1).The maximum frequency of  processor is 3.4GHz.We experimented with the PolarSSL cryptographic algorithm library and used Peapods to protect 2048-bit RSA private key calculations after splitting into 128 transactions and 256 transactions.The comparison objects in the experiment include: (1) the official default configuration of PolarSSL (version 1.3.6), (2) Peapods\_128, the Peapods split into 128 transactions,(3) Peapods\_256, the Peapods split into 256 transactions.
 
 \subsection{Local Performance}
 The local throughput for PolarSSL, Peapods\_128, and Peapods\_256 are: 391/s, 341/s, and 352/s (4 threads).Compared to PolarSSL, the performance of Peapods\_128 and Peapods\_256 dropped by 12.8\% and 10.0\%, respectively.The performance overhead introduced by Peapods mainly comes from: (1) waste of CPU clock cycles due to rollback of transactions; (2) encryption and decryption protection of sensitive information and intermediate calculation results; (3) preloading.The reason Peapods\_256 performs slightly better than Peapods\_128 is that the more granular splitting reduces transaction abort due to time-outs and other factors.
@@ -66,7 +66,7 @@ It is not difficult to find that transaction time and memory usage have an impac
 
 %abortÂÊµÄÍ¼
 \subsection{Impact on Concurrent Processes}
-We used Geekbench 3 to test Peapods' impact on other concurrent processes.Figure X shows Geekbench 3 scores in multi-core mode and single-core mode.The baseline is a score in clean environment.
+We used Geekbench 3 to test Peapods' impact on other concurrent processes.Figure\ref{fig:stream} shows Geekbench 3 scores in multi-core mode and single-core mode.The baseline is a score in clean environment.
 
 The Geekbench 3 benchmark program performed integer, floating point, and memory bandwidth tests, respectively.PolarSSL, Peapods\_128, and Peapods\_256 experiments have similar scores. Unprotected PolarSSL is slightly better than Peapods.When Geekbench occupies multiple cores, the load change that simultaneously processes RSA private key calculation requests cannot be ignored¡ªthe baseline has a clear demarcation from other scores.It is worth noting that XMM registers are mainly used for floating-point calculations, and generally only 1-2 XMM registers are used.When the environment has only a small number of floating point calculations, we will not significantly affect the XMM7 register from the register allocation pool. When there are a large number of floating point calculations in the environment, the overall performance will be slightly reduced.In short, Peapods do not have a significant additional impact on other concurrent processes.
 
@@ -77,7 +77,7 @@ The Geekbench 3 benchmark program performed integer, floating point, and memory 
 \label{fig:stream}
 \end{figure*}
 \subsection{Comparison with SGX}
-352 349      abort 1\% overhead
+{\color{blue}Intel Software Guard eXtensions (SGX) provide a hardware-enabled secure container that is isolated from other processes.We evaluated the performance of unmodified polarssl RSA decryption under SGX protection with only one percent performance overhead. This result may be caused by the absence of frequent entry and exit enclave during rsa decryption. Since the TLB caches the memory access in the enclave, the entry and exit of the enclave requires TLB flush, so the entry and exit of the enclave in SGX is the bottleneck.In addition, sgx has the following disadvantages:1.SGX requires developers to refactor the code and divide the program into trusted and non-trusted parts. Although there are currently SDKs released by Intel to assist in this work, it is still a lot of work, and it is easier to cause a secret leak. 2.If the enclave code itself has vulnerabilities, the enclave is unable to protect the integrity of the program. Currently, the ROP attack against the bufferoverflow can control the enclave\cite{lee2017hacking}. There are also some side-channel attacks that can cause secret leakage\cite{brasser2017software}. 3.SGX requires additional hardware support, such as the motherboard needs to be adapted to the intel CPU.}
 
 
-SGX requires additional hardware support, such as the motherboard needs to be adapted to the intel CPU
+

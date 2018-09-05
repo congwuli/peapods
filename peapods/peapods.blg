@@ -1,20 +1,30 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: peapods.aux
 The style file: ACM-Reference-Format.bst
 Database file #1: peapodstex.bib
+Warning--empty publisher in DMA2
+Warning--empty address in DMA2
+Warning--page numbers missing in both pages and numpages fields in DMA2
 Warning--empty publisher in Birgisson2008Enforcing
 Warning--empty address in Birgisson2008Enforcing
 Warning--empty publisher in Bocchino2008Software
 Warning--empty address in Bocchino2008Software
+Warning--no number and no volume in brasser2017software
+Warning--page numbers missing in both pages and numpages fields in brasser2017software
 Warning--empty publisher in Broadwell2003Scrash
 Warning--empty address in Broadwell2003Scrash
 Warning--empty publisher in Chen2016Shreds
 Warning--empty address in Chen2016Shreds
+Warning--empty publisher in understand-data-life
+Warning--empty address in understand-data-life
+Warning--page numbers missing in both pages and numpages fields in understand-data-life
 Warning--empty publisher in Couceiro2009D2STM
 Warning--empty address in Couceiro2009D2STM
 Warning--empty publisher in Damron2006Hybrid
 Warning--empty address in Damron2006Hybrid
 Warning--empty publisher in Drescher2016RamCrypt
 Warning--empty address in Drescher2016RamCrypt
+Warning--empty publisher in bugs
+Warning--empty address in bugs
 Warning--empty publisher in Freiling2011TRESOR
 Warning--empty address in Freiling2011TRESOR
 Warning--empty address in Garmany2013PRIME
@@ -48,6 +58,8 @@ Warning--empty publisher in Kumar2006Hybrid
 Warning--empty address in Kumar2006Hybrid
 Warning--empty publisher in Kuvaiskii2016HAFT
 Warning--empty address in Kuvaiskii2016HAFT
+Warning--no journal in lee2017hacking
+Warning--no number and no volume in lee2017hacking
 Warning--empty publisher in Liu2014Concurrent
 Warning--empty address in Liu2014Concurrent
 Warning--empty publisher in Mashtizadeh2015CCFI
@@ -77,4 +89,4 @@ Warning--no number and no volume in Wang2012Evaluation
 Warning--empty publisher in Xu2015Controlled
 Warning--empty address in Xu2015Controlled
 Warning--empty address in Zhao2016RegRSA
-(There were 76 warnings)
+(There were 88 warnings)

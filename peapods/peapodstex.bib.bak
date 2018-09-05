@@ -311,3 +311,60 @@ year={1995},
   pages={416-427},
   year={2014},
 }
+
+@inproceedings{Kuvaiskii2016HAFT,
+  title={HAFT: hardware-assisted fault tolerance},
+  author={Kuvaiskii, Dmitrii and Faqeh, Rasha and Bhatotia, Pramod and Felber, Pascal and Fetzer, Christof},
+  booktitle={Eleventh European Conference on Computer Systems},
+  pages={25},
+  year={2016},
+}
+
+@inproceedings{Jang2016Breaking,
+  title={Breaking Kernel Address Space Layout Randomization with Intel TSX},
+  author={Jang, Yeongjin and Lee, Sangho and Kim, Taesoo},
+  booktitle={ACM Sigsac Conference on Computer and Communications Security},
+  pages={380-392},
+  year={2016},
+}
+
+@inproceedings{Shih2017T,
+  title={T-SGX: Eradicating Controlled-Channel Attacks Against Enclave Programs},
+  author={Shih, Ming Wei and Lee, Sangho and Kim, Taesoo and Peinado, Marcus},
+  booktitle={Network and Distributed System Security Symposium},
+  year={2017},
+}
+
+@inproceedings{Xu2015Controlled,
+  title={Controlled-Channel Attacks: Deterministic Side Channels for Untrusted Operating Systems},
+  author={Xu, Yuanzhong and Cui, Weidong and Peinado, Marcus},
+  booktitle={Security and Privacy},
+  pages={640-656},
+  year={2015},
+}
+
+@article{Shinde2015Preventing,
+  title={Preventing Your Faults From Telling Your Secrets: Defenses Against Pigeonhole Attacks},
+  author={Shinde, Shweta and Zheng, Leong Chua and Narayanan, Viswesh and Saxena, Prateek},
+  journal={Computer Science},
+  year={2015},
+}
+
+@article{lee2017hacking,
+title={Hacking in Darkness: Return-oriented Programming against Secure Enclaves.},
+author={Lee, Jaehyuk and Jang, Jin Soo and Jang, Yeongjin and Kwak, Nohyun and Choi, Yeseul and Choi, Changho and Kim, Taesoo and Peinado, Marcus and Kang, Brent Byunghoon},
+pages={523--539},
+year={2017}}
+
+@article{brasser2017software,
+title={Software Grand Exposure: SGX Cache Attacks Are Practical},
+author={Brasser, Ferdinand and Muller, Urs A and Dmitrienko, Alexandra and Kostiainen, Kari and Capkun, Srdjan and Sadeghi, Ahmadreza},
+journal={arXiv: Cryptography and Security},
+year={2017}}
+
+@misc{heartbleed,
+ author = {{National Vulnerability Database}},
+ title = {{CVE-2014-0160}},
+ note = {\url{http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160}},
+ year = {2014}
+ }

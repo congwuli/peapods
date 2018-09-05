@@ -15,11 +15,33 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}}
+\citation{Guan2014Copker}
+\citation{Guan2015Protecting}
+\citation{Zhao2016RegRSA}
+\citation{Garmany2013PRIME}
+\citation{Freiling2011TRESOR}
+\citation{heartbleed}
+\citation{coldvsfrozencache}
 \@writefile{toc}{\contentsline {section}{\numberline {1}INTRODUCTION}{2}{section.1}}
+\citation{coldvsfrozencache}
+\citation{DMA2}
+\citation{DMA3}
+\citation{usbdma}
+\citation{heartbleed}
+\citation{bugs}
+\citation{softwareexploit}
+\citation{uncleared-data1}
+\citation{heartbleed}
+\citation{understand-data-life}
+\citation{wu-ftp-vul}
+\citation{dy-ftp-vul}
+\citation{solaris-ftp-vul}
 \@writefile{toc}{\contentsline {section}{\numberline {2}BACKGROUND}{3}{section.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Memory Disclosure Attacks}{3}{subsection.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}TSX}{4}{subsection.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}TSX}{3}{subsection.2.2}}
+\citation{extensions}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}LLVM}{4}{subsection.2.3}}
+\citation{Mashtizadeh2015CCFI}
 \@writefile{toc}{\contentsline {section}{\numberline {3}DESIGN}{5}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1} THREAT MODEL AND SECURITY GOALS}{5}{subsection.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2} Structure of Peapods }{5}{subsection.3.2}}
@@ -33,7 +55,7 @@
 \newlabel{tab:libfunc}{{1}{10}{Utility functions list\relax \relax }{table.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}usage method}{11}{subsection.4.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}SECURITY DISCUSSION}{12}{section.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}EVALUATION}{13}{section.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}EVALUATION}{12}{section.6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Local Performance}{13}{subsection.6.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Local Performance\relax }}{13}{figure.caption.3}}
 \newlabel{fig:rsa_local_peapods}{{1}{13}{Local Performance\relax \relax }{figure.caption.3}{}}
@@ -42,15 +64,16 @@
 \newlabel{tab:factors_abort_1}{{2}{14}{Effect of transaction time and memory usage on transaction abort(single thread)\relax \relax }{table.caption.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces  Effect of transaction time and memory usage on transaction abort(4 threads)\relax }}{14}{table.caption.5}}
 \newlabel{tab:factors_abort_4}{{3}{14}{Effect of transaction time and memory usage on transaction abort(4 threads)\relax \relax }{table.caption.5}{}}
-\citation{Harrison2007Protecting}
-\citation{Broadwell2003Scrash}
-\citation{Chen2016Shreds}
-\citation{Henson2013Beyond}
+\citation{lee2017hacking}
+\citation{brasser2017software}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Impact on Concurrent Processes}{15}{subsection.6.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Impact on Concurrent Processes\relax }}{15}{figure.caption.6}}
 \newlabel{fig:stream}{{2}{15}{Impact on Concurrent Processes\relax \relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Comparison with SGX}{15}{subsection.6.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}RELATED WORK}{15}{section.7}}
+\citation{Harrison2007Protecting}
+\citation{Broadwell2003Scrash}
+\citation{Chen2016Shreds}
+\citation{Henson2013Beyond}
 \citation{Freiling2011TRESOR}
 \citation{Garmany2013PRIME}
 \citation{Zhao2016RegRSA}
@@ -89,52 +112,67 @@
 \citation{Shih2017T}
 \citation{Xu2015Controlled}
 \citation{Shinde2015Preventing}
+\@writefile{toc}{\contentsline {section}{\numberline {7}RELATED WORK}{16}{section.7}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{peapodstex}
 \bibcite{Ananian2006Unbounded}{{1}{2006}{{Ananian et~al\unhbox \voidb@x \hbox {.}}}{{Ananian, Asanovic, Kuszmaul, Leiserson, and Lie}}}
-\bibcite{Birgisson2008Enforcing}{{2}{2008}{{Birgisson et~al\unhbox \voidb@x \hbox {.}}}{{Birgisson, Dhawan, Ganapathy, and Iftode}}}
-\bibcite{Bocchino2008Software}{{3}{2008}{{Bocchino et~al\unhbox \voidb@x \hbox {.}}}{{Bocchino, Adve, and Chamberlain}}}
-\bibcite{Broadwell2003Scrash}{{4}{2003}{{Broadwell et~al\unhbox \voidb@x \hbox {.}}}{{Broadwell, Harren, and Sastry}}}
-\bibcite{Carlstrom2006The}{{5}{2006}{{Carlstrom et~al\unhbox \voidb@x \hbox {.}}}{{Carlstrom, Mcdonald, Chafi, Chung, Minh, Kozyrakis, and Olukotun}}}
-\bibcite{Chen2016Shreds}{{6}{2016}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, Reymondjohnson, Sun, and Lu}}}
-\bibcite{Couceiro2009D2STM}{{7}{2009}{{Couceiro et~al\unhbox \voidb@x \hbox {.}}}{{Couceiro, Romano, Carvalho, and Rodrigues}}}
-\bibcite{Damron2006Hybrid}{{8}{2006}{{Damron et~al\unhbox \voidb@x \hbox {.}}}{{Damron, Fedorova, Lev, Luchangco, Moir, and Nussbaum}}}
-\bibcite{Dice2009Early}{{9}{2009}{{Dice et~al\unhbox \voidb@x \hbox {.}}}{{Dice, Lev, Moir, and Nussbaum}}}
-\bibcite{Drescher2016RamCrypt}{{10}{2016}{{Drescher and Backes}}{{Drescher and Backes}}}
-\bibcite{Freiling2011TRESOR}{{11}{2011}{{Freiling and Dewald}}{{Freiling and Dewald}}}
-\bibcite{Garmany2013PRIME}{{12}{2013}{{Garmany and M¨¹ller}}{{Garmany and M¨¹ller}}}
-\bibcite{Guan2014Copker}{{13}{2014}{{Guan et~al\unhbox \voidb@x \hbox {.}}}{{Guan, Lin, Luo, and Jing}}}
-\bibcite{Guan2015Protecting}{{14}{2015}{{Guan et~al\unhbox \voidb@x \hbox {.}}}{{Guan, Lin, Luo, Jing, and Wang}}}
-\bibcite{Hammond2004Transactional}{{15}{2004}{{Hammond et~al\unhbox \voidb@x \hbox {.}}}{{Hammond, Wong, Chen, Carlstrom, Davis, Hertzberg, Prabhu, Wijaya, Kozyrakis, and Olukotun}}}
+\bibcite{DMA2}{{2}{2005}{{Becher et~al\unhbox \voidb@x \hbox {.}}}{{Becher, Dornseif, and Klein}}}
+\bibcite{Birgisson2008Enforcing}{{3}{2008}{{Birgisson et~al\unhbox \voidb@x \hbox {.}}}{{Birgisson, Dhawan, Ganapathy, and Iftode}}}
+\bibcite{Bocchino2008Software}{{4}{2008}{{Bocchino et~al\unhbox \voidb@x \hbox {.}}}{{Bocchino, Adve, and Chamberlain}}}
+\bibcite{DMA3}{{5}{2009}{{Bock}}{{Bock}}}
+\bibcite{brasser2017software}{{6}{2017}{{Brasser et~al\unhbox \voidb@x \hbox {.}}}{{Brasser, Muller, Dmitrienko, Kostiainen, Capkun, and Sadeghi}}}
+\bibcite{Broadwell2003Scrash}{{7}{2003}{{Broadwell et~al\unhbox \voidb@x \hbox {.}}}{{Broadwell, Harren, and Sastry}}}
+\bibcite{Carlstrom2006The}{{8}{2006}{{Carlstrom et~al\unhbox \voidb@x \hbox {.}}}{{Carlstrom, Mcdonald, Chafi, Chung, Minh, Kozyrakis, and Olukotun}}}
+\bibcite{Chen2016Shreds}{{9}{2016}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, Reymondjohnson, Sun, and Lu}}}
+\bibcite{understand-data-life}{{10}{2004}{{Chow et~al\unhbox \voidb@x \hbox {.}}}{{Chow, Pfaff, Garfinkel, Christopher, and Rosenblum}}}
+\bibcite{Couceiro2009D2STM}{{11}{2009}{{Couceiro et~al\unhbox \voidb@x \hbox {.}}}{{Couceiro, Romano, Carvalho, and Rodrigues}}}
+\bibcite{Damron2006Hybrid}{{12}{2006}{{Damron et~al\unhbox \voidb@x \hbox {.}}}{{Damron, Fedorova, Lev, Luchangco, Moir, and Nussbaum}}}
 \@writefile{toc}{\contentsline {section}{\numberline {8}CONCLUSION}{17}{section.8}}
 \@writefile{toc}{\contentsline {section}{Acknowledgments}{17}{section*.8}}
 \@writefile{toc}{\contentsline {section}{References}{17}{section*.10}}
-\bibcite{Harris2005Composable}{{16}{2005}{{Harris et~al\unhbox \voidb@x \hbox {.}}}{{Harris, Marlow, Peyton-Jones, and Herlihy}}}
-\bibcite{Harrison2007Protecting}{{17}{2007}{{Harrison and Xu}}{{Harrison and Xu}}}
-\bibcite{Henson2013Beyond}{{18}{2013}{{Henson and Taylor}}{{Henson and Taylor}}}
-\bibcite{Herlihy2006A}{{19}{2006}{{Herlihy et~al\unhbox \voidb@x \hbox {.}}}{{Herlihy, Luchangco, and Moir}}}
-\bibcite{extensions}{{20}{2012}{{{Intel}}}{{{Intel}}}}
-\bibcite{sgx}{{21}{2014}{{{Intel}}}{{{Intel}}}}
-\bibcite{Jacobi2012Transactional}{{22}{2012}{{Jacobi et~al\unhbox \voidb@x \hbox {.}}}{{Jacobi, Slegel, and Dan}}}
-\bibcite{Jang2016Breaking}{{23}{2016}{{Jang et~al\unhbox \voidb@x \hbox {.}}}{{Jang, Lee, and Kim}}}
-\bibcite{Kotselidis2008DiSTM}{{24}{2008}{{Kotselidis et~al\unhbox \voidb@x \hbox {.}}}{{Kotselidis, Ansari, Jarvis, Luj¨¢n, Kirkham, and Watson}}}
-\bibcite{Kumar2006Hybrid}{{25}{2006}{{Kumar et~al\unhbox \voidb@x \hbox {.}}}{{Kumar, Chu, Hughes, Kundu, and Nguyen}}}
-\bibcite{Kuvaiskii2016HAFT}{{26}{2016}{{Kuvaiskii et~al\unhbox \voidb@x \hbox {.}}}{{Kuvaiskii, Faqeh, Bhatotia, Felber, and Fetzer}}}
-\bibcite{Liu2014Concurrent}{{27}{2014}{{Liu et~al\unhbox \voidb@x \hbox {.}}}{{Liu, Xia, Guan, Zang, and Chen}}}
-\bibcite{Mashtizadeh2015CCFI}{{28}{2015}{{Mashtizadeh et~al\unhbox \voidb@x \hbox {.}}}{{Mashtizadeh, Bittau, and Dan}}}
-\bibcite{Moore2006LogTM}{{29}{2006}{{Moore et~al\unhbox \voidb@x \hbox {.}}}{{Moore, Bobba, Moravan, and Hill}}}
-\bibcite{Ni2008Design}{{30}{2008}{{Ni et~al\unhbox \voidb@x \hbox {.}}}{{Ni, Welc, Adl-Tabatabai, Bach, Berkowits, Cownie, Geva, Kozhukow, Narayanaswamy, and Olivier}}}
-\bibcite{Rajwar2005Virtualizing}{{31}{2005}{{Rajwar et~al\unhbox \voidb@x \hbox {.}}}{{Rajwar, Herlihy, and Lai}}}
-\bibcite{Romano2010Cloud}{{32}{2010}{{Romano et~al\unhbox \voidb@x \hbox {.}}}{{Romano, Rodrigues, and Carvalho}}}
-\bibcite{Saad2011Snake}{{33}{2011}{{Saad and Ravindran}}{{Saad and Ravindran}}}
-\bibcite{Schindewolf2009Towards}{{34}{2009}{{Schindewolf et~al\unhbox \voidb@x \hbox {.}}}{{Schindewolf, Cohen, Karl, Marongiu, and Benini}}}
-\bibcite{shavit1995software}{{35}{1995}{{Shavit and Touitou}}{{Shavit and Touitou}}}
-\bibcite{Shih2017T}{{36}{2017}{{Shih et~al\unhbox \voidb@x \hbox {.}}}{{Shih, Lee, Kim, and Peinado}}}
-\bibcite{Shinde2015Preventing}{{37}{2015}{{Shinde et~al\unhbox \voidb@x \hbox {.}}}{{Shinde, Zheng, Narayanan, and Saxena}}}
-\bibcite{Szekeres2013Eternal}{{38}{2013}{{Szekeres et~al\unhbox \voidb@x \hbox {.}}}{{Szekeres, Payer, Wei, and Song}}}
-\bibcite{Wang2012Evaluation}{{39}{2012}{{Wang et~al\unhbox \voidb@x \hbox {.}}}{{Wang, Gaudet, Wu, Amaral, Ohmacht, Barton, Silvera, and Michael}}}
-\bibcite{Xu2015Controlled}{{40}{2015}{{Xu et~al\unhbox \voidb@x \hbox {.}}}{{Xu, Cui, and Peinado}}}
-\bibcite{Zhao2016RegRSA}{{41}{2016}{{Zhao et~al\unhbox \voidb@x \hbox {.}}}{{Zhao, Lin, Pan, Xue, Zheng, and Ma}}}
+\bibcite{Dice2009Early}{{13}{2009}{{Dice et~al\unhbox \voidb@x \hbox {.}}}{{Dice, Lev, Moir, and Nussbaum}}}
+\bibcite{Drescher2016RamCrypt}{{14}{2016}{{Drescher and Backes}}{{Drescher and Backes}}}
+\bibcite{bugs}{{15}{2001}{{Engler et~al\unhbox \voidb@x \hbox {.}}}{{Engler, Chen, Hallem, Chou, and Chelf}}}
+\bibcite{Freiling2011TRESOR}{{16}{2011}{{Freiling and Dewald}}{{Freiling and Dewald}}}
+\bibcite{Garmany2013PRIME}{{17}{2013}{{Garmany and M¨¹ller}}{{Garmany and M¨¹ller}}}
+\bibcite{Guan2014Copker}{{18}{2014}{{Guan et~al\unhbox \voidb@x \hbox {.}}}{{Guan, Lin, Luo, and Jing}}}
+\bibcite{Guan2015Protecting}{{19}{2015}{{Guan et~al\unhbox \voidb@x \hbox {.}}}{{Guan, Lin, Luo, Jing, and Wang}}}
+\bibcite{Hammond2004Transactional}{{20}{2004}{{Hammond et~al\unhbox \voidb@x \hbox {.}}}{{Hammond, Wong, Chen, Carlstrom, Davis, Hertzberg, Prabhu, Wijaya, Kozyrakis, and Olukotun}}}
+\bibcite{Harris2005Composable}{{21}{2005}{{Harris et~al\unhbox \voidb@x \hbox {.}}}{{Harris, Marlow, Peyton-Jones, and Herlihy}}}
+\bibcite{Harrison2007Protecting}{{22}{2007}{{Harrison and Xu}}{{Harrison and Xu}}}
+\bibcite{Henson2013Beyond}{{23}{2013}{{Henson and Taylor}}{{Henson and Taylor}}}
+\bibcite{Herlihy2006A}{{24}{2006}{{Herlihy et~al\unhbox \voidb@x \hbox {.}}}{{Herlihy, Luchangco, and Moir}}}
+\bibcite{extensions}{{25}{2012}{{{Intel}}}{{{Intel}}}}
+\bibcite{sgx}{{26}{2014}{{{Intel}}}{{{Intel}}}}
+\bibcite{Jacobi2012Transactional}{{27}{2012}{{Jacobi et~al\unhbox \voidb@x \hbox {.}}}{{Jacobi, Slegel, and Dan}}}
+\bibcite{Jang2016Breaking}{{28}{2016}{{Jang et~al\unhbox \voidb@x \hbox {.}}}{{Jang, Lee, and Kim}}}
+\bibcite{coldvsfrozencache}{{29}{2009}{{Kabay and Pabel}}{{Kabay and Pabel}}}
+\bibcite{wu-ftp-vul}{{30}{1997}{{Kolontsov}}{{Kolontsov}}}
+\bibcite{Kotselidis2008DiSTM}{{31}{2008}{{Kotselidis et~al\unhbox \voidb@x \hbox {.}}}{{Kotselidis, Ansari, Jarvis, Luj¨¢n, Kirkham, and Watson}}}
+\bibcite{Kumar2006Hybrid}{{32}{2006}{{Kumar et~al\unhbox \voidb@x \hbox {.}}}{{Kumar, Chu, Hughes, Kundu, and Nguyen}}}
+\bibcite{Kuvaiskii2016HAFT}{{33}{2016}{{Kuvaiskii et~al\unhbox \voidb@x \hbox {.}}}{{Kuvaiskii, Faqeh, Bhatotia, Felber, and Fetzer}}}
+\bibcite{lee2017hacking}{{34}{2017}{{Lee et~al\unhbox \voidb@x \hbox {.}}}{{Lee, Jang, Jang, Kwak, Choi, Choi, Kim, Peinado, and Kang}}}
+\bibcite{Liu2014Concurrent}{{35}{2014}{{Liu et~al\unhbox \voidb@x \hbox {.}}}{{Liu, Xia, Guan, Zang, and Chen}}}
+\bibcite{Mashtizadeh2015CCFI}{{36}{2015}{{Mashtizadeh et~al\unhbox \voidb@x \hbox {.}}}{{Mashtizadeh, Bittau, and Dan}}}
+\bibcite{usbdma}{{37}{2005}{{Maynor}}{{Maynor}}}
+\bibcite{uncleared-data1}{{38}{2013}{{{MITRE}}}{{{MITRE}}}}
+\bibcite{Moore2006LogTM}{{39}{2006}{{Moore et~al\unhbox \voidb@x \hbox {.}}}{{Moore, Bobba, Moravan, and Hill}}}
+\bibcite{heartbleed}{{40}{2014}{{{National Vulnerability Database}}}{{{National Vulnerability Database}}}}
+\bibcite{Ni2008Design}{{41}{2008}{{Ni et~al\unhbox \voidb@x \hbox {.}}}{{Ni, Welc, Adl-Tabatabai, Bach, Berkowits, Cownie, Geva, Kozhukow, Narayanaswamy, and Olivier}}}
+\bibcite{softwareexploit}{{42}{2010}{{Rabaiotti and Hargreaves}}{{Rabaiotti and Hargreaves}}}
+\bibcite{Rajwar2005Virtualizing}{{43}{2005}{{Rajwar et~al\unhbox \voidb@x \hbox {.}}}{{Rajwar, Herlihy, and Lai}}}
+\bibcite{Romano2010Cloud}{{44}{2010}{{Romano et~al\unhbox \voidb@x \hbox {.}}}{{Romano, Rodrigues, and Carvalho}}}
+\bibcite{Saad2011Snake}{{45}{2011}{{Saad and Ravindran}}{{Saad and Ravindran}}}
+\bibcite{Schindewolf2009Towards}{{46}{2009}{{Schindewolf et~al\unhbox \voidb@x \hbox {.}}}{{Schindewolf, Cohen, Karl, Marongiu, and Benini}}}
+\bibcite{shavit1995software}{{47}{1995}{{Shavit and Touitou}}{{Shavit and Touitou}}}
+\bibcite{Shih2017T}{{48}{2017}{{Shih et~al\unhbox \voidb@x \hbox {.}}}{{Shih, Lee, Kim, and Peinado}}}
+\bibcite{Shinde2015Preventing}{{49}{2015}{{Shinde et~al\unhbox \voidb@x \hbox {.}}}{{Shinde, Zheng, Narayanan, and Saxena}}}
+\bibcite{dy-ftp-vul}{{50}{1997}{{{sp00n}}}{{{sp00n}}}}
+\bibcite{Szekeres2013Eternal}{{51}{2013}{{Szekeres et~al\unhbox \voidb@x \hbox {.}}}{{Szekeres, Payer, Wei, and Song}}}
+\bibcite{solaris-ftp-vul}{{52}{1996}{{{Unknown author}}}{{{Unknown author}}}}
+\bibcite{Wang2012Evaluation}{{53}{2012}{{Wang et~al\unhbox \voidb@x \hbox {.}}}{{Wang, Gaudet, Wu, Amaral, Ohmacht, Barton, Silvera, and Michael}}}
+\bibcite{Xu2015Controlled}{{54}{2015}{{Xu et~al\unhbox \voidb@x \hbox {.}}}{{Xu, Cui, and Peinado}}}
+\bibcite{Zhao2016RegRSA}{{55}{2016}{{Zhao et~al\unhbox \voidb@x \hbox {.}}}{{Zhao, Lin, Pan, Xue, Zheng, and Ma}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{0pt}

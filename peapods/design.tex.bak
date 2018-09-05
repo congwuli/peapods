@@ -6,19 +6,25 @@
 \subsection{ THREAT MODEL AND SECURITY GOALS}
 
 
-\textbf{THREAT MODEL}:In this paper we assume a powerful attacker who has the ability
+\textbf{THREAT MODEL}:In this paper we assume the attacker has the ability
 to read arbitrary areas of memory and overwrite all writable
 areas of memory.{\color{blue} However,as we are concerned with memory disclosure attacks in this paper, the attacker is unable to write to executable
-memory (marked read-only).Since the registers set to the LLVM compiler reserved registers will be removed from the register allocation pool, the attacker can not read the value of special
+memory.Since the registers set to the LLVM compiler reserved registers will be removed from the register allocation pool, the attacker can not read the value of special
 registers which LLVM compiler reserves either.}
 
-Peapods is focused on protecting user-level programs such as PolarSSL RSA decryption calculation, and we do not address protecting the kernel in this paper.
-We assume that the kernel does not save any user-level registers—
-at least the ones that are used to store the key—during context
-switches in user accessible memory. This is true of all major modern
-operating systems that we are aware of. Custom user-level
-threading libraries may also require changes to ensure these registers
-are not saved.
+Similar to CCFI\cite{Mashtizadeh2015CCFI}, peapods is focused on protecting user-level programs such as PolarSSL RSA decryption calculation, and we do not address protecting the kernel in this paper.
+Therefore, we assume that the operating system kernel does not save the special user-level registers we use to store the master key during context switches in user accessible memory.
+In fact, major modern operating systems are all support our assumptions.Then, we also need to make some modifications to the user-level threading libraries to ensure these special user-level registers are not saved.
+
+%We assume that the kernel does not save any user-level registers—
+%at least the ones that are used to store the key during context
+%switches in user accessible memory. This is true of all major modern
+%operating systems that we are aware of. Custom user-level
+%threading libraries may also require changes to ensure these registers
+%are not saved.
+
+%因此，我们假设操作系统内核不会保存我们用于存储主密钥的特殊用户态寄存器during context switches in user accessible memory.事实上，主流操作系统都支持我们这一假设。另一方面，我们还需要对user-level threading libraries进行一些修改 to ensure these special user-level registers
+%are not saved.
 
 %仔细参考CCFI的安全模型 dump内存情况下如何进行防御
 %1.We assume that HTM is correctly implemented.
@@ -35,7 +41,7 @@ are not saved.
 %实现的peapods是一个编译器工具  实现了X自动化X功能
 %We proposes Peapods, a LLVM-based compiler enhancement tool that automates the protection of sensitive information in memory
 
-{\color{blue}\textbf{SECURITY GOALS}:Under the premise of the above thread model, we proposes Peapods, a LLVM-based compiler enhancement tool that automates the protection of sensitive information in memory to achieve the following security goals:
+\textbf{SECURITY GOALS}:Under the premise of the above thread model, we proposes Peapods, a LLVM-based compiler enhancement tool that automates the protection of sensitive information in memory to achieve the following security goals:
 \begin{enumerate}
 
 %\item In the process of calculating sensitive information, no thread other than the Peapods thread can obtain sensitive data in memory, including master key, sensitive information and intermediate variables.
@@ -44,17 +50,17 @@ are not saved.
 
 %\item Sensitive data in plain text cannot appear in DRAM chips；
 
-{\color{blue}\item During key computation, no process other than peapods can access the sensitive data in memory, including the AES master key,the plaintext key and intermediate states.Further, in a transaction execution, whether it is a successful commit or an unexpected termination, each peapods will immediately erase all sensitive data, so the attacker can not access sensitive data by interrupting peapods.At the same time, The sensitive data never appear on the RAM chips.
+\item During key computation, no process other than peapods can access the sensitive data in memory, including the AES master key,the plaintext key and intermediate states.Further, in a transaction execution, whether it is a successful commit or an unexpected termination, each peapods will immediately erase all sensitive data, so the attacker can not access sensitive data by interrupting peapods.At the same time, The sensitive data never appear on the RAM chips.
 
 \item Without using kernel features, peapods protects the key in every key computation.
 
-\item Implementation is independent of the cryptographic algorithm. Peapods automatically protects the key computation after the user adds a small amount of code(such as the keyword to tag key and the code to start and end key computation,etc).}
+\item Implementation is independent of the cryptographic algorithm. Peapods automatically protects the key computation after the user adds a small amount of code(such as the keyword to tag key and the code to start and end key computation,etc).
 
 \end{enumerate}
 
 The first goal can resist memory disclosure attacks, the second goal is to provide support for the application layer cryptographic software systems in user mode, the third goal is to enable Peapods to implement security enhancements for a variety of cryptographic software systems automatically.
 
-In summary, Peapods can resist various memory disclosure attacks and provide security enhancements for various application layer cryptographic software systems, automatically.}
+In summary, Peapods can resist various memory disclosure attacks and provide security enhancements for various application layer cryptographic software systems, automatically.
 %\section{CHALLENGES AND SOLUTIONS}
 %1.如何在源代码的基础上实现对敏感变量的识别和加解密保护
 %LLVM PASS
@@ -69,13 +75,14 @@ In summary, Peapods can resist various memory disclosure attacks and provide sec
 %\subsection{CHALLENGES AND SOLUTIONS}
 
 %peapods为何能够抵抗内存泄漏攻击
-Mimosa provides a defense against memory disclosure attacks in kernel-mode.Based on Mimosa, we propose Peapods to defend against memory disclosure attacks in user-mode.Peapods is a LLVM-based compiler enhancement tool that automatically protects memory that stores sensitive information, programmers do not need to refactor the entire cryptographic software, just add a small amount of code, peapods can provide security enhancements for various cryptographic software systems.We provide users with a new \textbf{keyword} to tag sensitive variables, after the user completes the tag, peapods will automatically protect sensitive variables. During Automated process, we need to protect the following three sensitive variables separately:(1) local variable that address was already determined at compile time, (2) global variable or static variable that address was already determined at compile time, (3) variable that address was not determined at compile time.In order to reduce the impact of time interrupts on transactions, we introduced transaction split.Frequent page faults occur during program execution, we designed efficient preload for Peapods to solve page fault problems.
+%Mimosa provides a defense against memory disclosure attacks in kernel-mode.Based on Mimosa,
+We propose Peapods to defend against memory disclosure attacks in user-mode.Peapods is a LLVM-based compiler enhancement tool that automatically protects memory that stores sensitive information, programmers do not need to refactor the entire cryptographic software, just add a small amount of code, peapods can provide security enhancements for various cryptographic software systems.We provide users with a new \textbf{keyword} to tag sensitive variables, after the user completes the tag, peapods will automatically protect sensitive variables. During Automated process, we need to protect the following three sensitive variables separately:(1) local variable that address was already determined at compile time, (2) global variable or static variable that address was already determined at compile time, (3) variable that address was not determined at compile time.In order to reduce the impact of time interrupts on transactions, we introduced transaction split.Frequent page faults occur during program execution, we designed efficient preload for Peapods to solve page fault problems.
 %The basic idea is to apply HTM to protect the data in the transaction.
 %In our scenario, a Peapod represents a protected key-related calculation (especially the private key calculation in the public-key cryptographic algorithm).Through the transactional memory mechanism, we can guarantee that in the course of calculation, once an attacker reads the key, the key will be automatically cleared.If the computing key is in a non-calculated state, it is in a ciphertext state.Further, to ensure that calculations can be completed in the transactional memory protection state, it can be split into multiple partitioned tasks.Between the partitioned tasks will exit the transactional memory state, but the calculated intermediate variables will also be encrypted to avoid the leakage of sensitive information.Although peapods is mainly dedicated to the protection of keys in cryptographic systems, peapods can also protect user sensitive information when necessary.
 
 
 
-{\color{blue}In order to achieve security goals,we divide the operation process of Peapods into three phases:Programming phase, Compilation phase and Program execution phase.}
+In order to achieve security goals,we divide the operation process of Peapods into three phases:Programming phase, Compilation phase and Program execution phase.
 
 Programming phase:For sensitive variables whose compile-time address has already been determined, the user needs to add the keywords we provide in the place where the sensitive variables are defined. For sensitive variables whose compile-time address is not determined, the user needs to provide information of such sensitive variables,and then they also need to use the interface we provided for parameter passing through specified structure.When it is necessary to assign a value to a sensitive variable, the user needs to call T\_START(args\_list) before the sensitive variable assignment and T\_END(args\_list) after the assignment.
 %peapods操作过程分为用户处理阶段，工具处理阶段以及程序执行阶段
@@ -95,7 +102,7 @@ Compilation phase:1.Add initialization logic.2.For sensitive variables whose com
 
 %程序执行阶段
 %分为初始化阶段，敏感变量定义和赋值阶段，保护计算阶段
-{\color{blue}Program execution phase:We can divide the program execution phase into initialization phase and protected computing phase.}
+Program execution phase:We can divide the program execution phase into initialization phase and protected computing phase.
 
 We use an AES master key to protect user sensitive data. The AES master key is generated at program startup and is then stored in the LLVM compiler reserved register.Sensitive variables are AES encrypted after user-defined initialization or after assignment. When receiving a request for calculating sensitive information, Sensitive information is dynamically generated, used, and destroyed in transaction execution.When there is no computing task, sensitive information is always stored in ciphertext in memory.
 
@@ -107,7 +114,7 @@ We use an AES master key to protect user sensitive data. The AES master key is g
 %\label{fig:design}
 %\end{figure*}
 
-{\color{blue}Initialization phase:
+Initialization phase:
 This stage starts when the program starts, mainly performing the following steps:
 1.Randomly generate the AES master key and copy it to the reserved register in each CPU core.
 2.Call the main function's preload function.
@@ -115,12 +122,12 @@ This stage starts when the program starts, mainly performing the following steps
 4.The global variable IV is randomly generated, and the CBC-mode AES encryption is performed on all the global variable-sensitive information that has been identified.Finally, the intermediate states used in this phase are carefully cleared.
 5.After variable initialization and variable assignment,Peapods encrypts the sensitive variable in plain text using the AES master key, so that the sensitive variable is stored in memory in ciphertext form.
 
-The first step is to generate the master key, the second and third steps are to prevent Peapods from abort the transaction due to page fault in the code segment, the fourth step is to store the sensitive information in ciphertext in memory, the last step makes sensitive variables stored in memory in ciphertext after initialization and assignment.}
+The first step is to generate the master key, the second and third steps are to prevent Peapods from abort the transaction due to page fault in the code segment, the fourth step is to store the sensitive information in ciphertext in memory, the last step makes sensitive variables stored in memory in ciphertext after initialization and assignment.
 
 
 
 Protected computing phase:
-When Peapods receives a sensitive information calculation request, sensitive information is calculated using the corresponding sensitive information, and then the result is provided to the user.This stage contains the following steps:
+When Peapods receives a sensitive information calculation request, the protected computing is calculated using the corresponding sensitive information, and then the result is provided to the user.This stage contains the following steps:
 1.TSX begins to track memory access in the L1 data cache (maintaining read/write sets).
 2.Ciphertext sensitive information is loaded into cache from memory.
 3.Master key is loaded into cache from reserved register.
